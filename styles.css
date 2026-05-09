@@ -1,274 +1,148 @@
-:root {
-  --bg: #070707;
-  --text: #f5f1eb;
-  --muted: #a0a0a0;
-  --orange: #f36b1f;
-  --border: rgba(255,255,255,0.08);
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TradeFuel™</title>
 
-* {
-  box-sizing: border-box;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-}
+<body>
 
-/* NAV */
+<!-- NAV -->
+<header class="nav">
+  <div class="logo">
+    <div class="logo-box">TF</div>
+    <div>
+      <div class="logo-title">TRADEFUEL™</div>
+      <div class="logo-sub">Fuel for the trades</div>
+    </div>
+  </div>
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 5%;
-  border-bottom: 1px solid var(--border);
-}
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#signup">Join</a>
+  </div>
+</header>
 
-.logo {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
+<!-- HERO -->
+<section class="hero">
 
-.logo-box {
-  width: 42px;
-  height: 42px;
-  border: 2px solid var(--orange);
-  display: grid;
-  place-items: center;
-  font-family: 'Anton';
-  color: var(--orange);
-}
+  <div class="hero-text">
 
-.logo-title {
-  font-family: 'Anton';
-}
+    <div class="eyebrow">ENERGY • HYDRATION • PERFORMANCE</div>
 
-.logo-sub {
-  font-size: 12px;
-  color: var(--muted);
-}
+    <h1>TRADEFUEL™</h1>
 
-.nav-links a {
-  margin-left: 18px;
-  color: var(--muted);
-  text-decoration: none;
-}
+    <h2>Fuel for the trades.</h2>
 
-/* HERO */
+    <p class="subhead">
+      Electrolyte hydration + clean energy built for long shifts, hard work, heat, exhaustion, and crews running on empty.
+    </p>
 
-.hero {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  padding: 80px 5%;
-  align-items: center;
-}
+    <p class="tagline">
+      Fuel for when the shift doesn’t care how tired you are.
+    </p>
 
-.eyebrow {
-  color: var(--orange);
-  letter-spacing: 2px;
-  font-size: 12px;
-}
+    <div class="buttons">
+      <a class="btn primary" href="#signup">Join the Crew</a>
+      <a class="btn secondary" href="#about">Learn More</a>
+    </div>
 
-h1 {
-  font-family: 'Anton';
-  font-size: 64px;
-  margin: 10px 0;
-}
+    <div class="tags">
+      <span>⚡ Clean Energy</span>
+      <span>🧊 Hydration</span>
+      <span>⛑ Built for Crews</span>
+    </div>
 
-h2 {
-  font-size: 28px;
-}
+  </div>
 
-.subhead {
-  color: var(--muted);
-  line-height: 1.6;
-}
+  <div class="hero-card">
+    <div class="glow"></div>
+    <div class="can">
+      <div class="bar"></div>
+      <div class="name">TRADEFUEL</div>
+      <div class="bottom">ELECTROLYTE + ENERGY</div>
+    </div>
+  </div>
 
-.tagline {
-  margin-top: 10px;
-  font-weight: 600;
-}
+</section>
 
-/* BUTTONS */
+<!-- FEATURES -->
+<section class="features" id="about">
 
-.buttons {
-  margin-top: 20px;
-}
+  <div class="card">
+    <h3>⚡ Clean Energy</h3>
+    <p>Long-lasting energy without the heavy crash.</p>
+  </div>
 
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
+  <div class="card">
+    <h3>🧊 Hydration Support</h3>
+    <p>Built for heat, sweat, and demanding conditions.</p>
+  </div>
 
-.primary {
-  background: var(--orange);
-  color: black;
-}
+  <div class="card">
+    <h3>⛑ Built for Trades</h3>
+    <p>Designed for roofers, welders, framers, mechanics, and pipefitters pushing through long shifts.</p>
+  </div>
 
-.secondary {
-  border: 1px solid var(--border);
-  color: white;
-  margin-left: 10px;
-}
+</section>
 
-/* TAGS */
+<!-- MISSION (ONLY VERSION — NO DUPLICATES POSSIBLE) -->
+<section class="mission" id="mission">
 
-.tags span {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: 15px;
-  font-size: 12px;
-  color: var(--muted);
-}
+  <div class="mission-box">
 
-/* CAN */
+    <h2>Our Mission</h2>
 
-.hero-card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
+    <p class="highlight">Fuel the people who build this world.</p>
 
-.glow {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(243,107,31,0.25), transparent);
-  filter: blur(40px);
-}
+    <p>
+      TradeFuel is built for roofers, welders, framers, mechanics, and pipefitters working long hours in real conditions.
+    </p>
 
-.can {
-  width: 220px;
-  height: 420px;
-  border-radius: 30px;
-  background: #111;
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+    <p class="strong">
+      This isn’t office energy. This is jobsite fuel.
+    </p>
 
-.bar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 60px;
-  height: 6px;
-  background: var(--orange);
-}
+  </div>
 
-.name {
-  font-family: 'Anton';
-  transform: rotate(-90deg);
-  font-size: 32px;
-}
+</section>
 
-.bottom {
-  position: absolute;
-  bottom: 15px;
-  font-size: 10px;
-  color: var(--orange);
-}
+<!-- SIGNUP -->
+<section class="signup" id="signup">
 
-/* FEATURES */
+  <div class="signup-box">
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-  padding: 60px 5%;
-}
+    <div class="eyebrow">EARLY ACCESS</div>
 
-.card {
-  border: 1px solid var(--border);
-  padding: 20px;
-  border-radius: 12px;
-}
+    <h2>Join the Crew</h2>
 
-/* MISSION */
+    <p>Get updates, drops, and early access.</p>
 
-.mission {
-  padding: 60px 5%;
-}
+    <form class="form"
+      action="https://formspree.io/f/mnjwgbwe"
+      method="POST">
 
-.mission-box {
-  border: 1px solid var(--border);
-  padding: 40px;
-  border-radius: 16px;
-}
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
 
-.highlight {
-  color: var(--orange);
-  font-weight: bold;
-}
+      <button type="submit">Join</button>
 
-.strong {
-  font-weight: bold;
-}
+    </form>
 
-/* SIGNUP */
+    <p class="note">No spam. Just launch updates.</p>
 
-.signup {
-  padding: 60px 5%;
-}
+  </div>
 
-.signup-box {
-  border: 1px solid var(--border);
-  padding: 40px;
-  border-radius: 16px;
-  text-align: center;
-}
+</section>
 
-.form {
-  margin-top: 20px;
-}
-
-input {
-  padding: 12px;
-  width: 250px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #111;
-  color: white;
-}
-
-button {
-  padding: 12px 16px;
-  background: var(--orange);
-  border: none;
-  border-radius: 8px;
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.note {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 10px;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .features {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-}
+</body>
+</html>
