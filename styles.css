@@ -23,18 +23,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
-  position: sticky;
-  top: 0;
-  background: rgba(7,7,7,0.85);
-  backdrop-filter: blur(10px);
+  padding: 18px 5%;
   border-bottom: 1px solid var(--border);
 }
 
 .logo {
   display: flex;
-  align-items: center;
   gap: 12px;
+  align-items: center;
 }
 
 .logo-box {
@@ -43,8 +39,8 @@ body {
   border: 2px solid var(--orange);
   display: grid;
   place-items: center;
-  color: var(--orange);
   font-family: 'Anton';
+  color: var(--orange);
 }
 
 .logo-title {
@@ -56,7 +52,7 @@ body {
   color: var(--muted);
 }
 
-.links a {
+.nav-links a {
   margin-left: 18px;
   color: var(--muted);
   text-decoration: none;
@@ -86,12 +82,16 @@ h1 {
 
 h2 {
   font-size: 28px;
-  margin-bottom: 10px;
 }
 
-p {
+.subhead {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 /* BUTTONS */
@@ -103,10 +103,9 @@ p {
 .btn {
   display: inline-block;
   padding: 12px 18px;
-  margin-right: 10px;
-  text-decoration: none;
   border-radius: 8px;
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .primary {
@@ -117,6 +116,7 @@ p {
 .secondary {
   border: 1px solid var(--border);
   color: white;
+  margin-left: 10px;
 }
 
 /* TAGS */
@@ -131,7 +131,7 @@ p {
 
 /* CAN */
 
-.can-wrap {
+.hero-card {
   position: relative;
   display: flex;
   justify-content: center;
@@ -157,7 +157,7 @@ p {
   position: relative;
 }
 
-.can-bar {
+.bar {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -166,13 +166,13 @@ p {
   background: var(--orange);
 }
 
-.can-name {
+.name {
   font-family: 'Anton';
   transform: rotate(-90deg);
   font-size: 32px;
 }
 
-.can-bottom {
+.bottom {
   position: absolute;
   bottom: 15px;
   font-size: 10px;
@@ -206,6 +206,15 @@ p {
   border-radius: 16px;
 }
 
+.highlight {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.strong {
+  font-weight: bold;
+}
+
 /* SIGNUP */
 
 .signup {
@@ -226,7 +235,6 @@ p {
 input {
   padding: 12px;
   width: 250px;
-  max-width: 100%;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: #111;
@@ -243,9 +251,9 @@ button {
 }
 
 .note {
-  margin-top: 10px;
   font-size: 12px;
   color: var(--muted);
+  margin-top: 10px;
 }
 
 /* MOBILE */
@@ -260,7 +268,7 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .links {
+  .nav-links {
     display: none;
   }
 }
