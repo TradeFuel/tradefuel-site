@@ -33,10 +33,10 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  backdrop-filter: blur(18px);
-  background: rgba(7,7,7,.78);
-  border-bottom: 1px solid rgba(255,255,255,.04);
   z-index: 999;
+  backdrop-filter: blur(16px);
+  background: rgba(7,7,7,.82);
+  border-bottom: 1px solid rgba(255,255,255,.05);
 }
 
 .logo-wrap {
@@ -52,8 +52,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Anton', sans-serif;
   color: var(--orange);
+  font-family: 'Anton', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .logo-sub {
-  font-size: .8rem;
+  font-size: .78rem;
   color: var(--muted);
   text-transform: uppercase;
 }
@@ -86,23 +86,22 @@ body {
 
 .hero {
   min-height: 100vh;
-  padding: 100px 5%;
+  padding: 90px 5%;
   display: grid;
   grid-template-columns: 1.1fr .9fr;
-  align-items: center;
   gap: 60px;
+  align-items: center;
   position: relative;
 }
 
-.hero:before {
+.hero::before {
   content: '';
   position: absolute;
   width: 700px;
   height: 700px;
   background: radial-gradient(circle, rgba(243,107,31,.14), transparent 70%);
-  top: -200px;
-  right: -200px;
-  z-index: 0;
+  top: -250px;
+  right: -250px;
 }
 
 .hero-content {
@@ -118,17 +117,17 @@ body {
 }
 
 h1 {
+  margin: 0;
   font-family: 'Anton', sans-serif;
   font-size: clamp(4rem, 10vw, 8rem);
   line-height: .9;
-  margin: 0;
 }
 
 h2 {
+  margin-top: 18px;
   font-family: 'Anton', sans-serif;
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 1.05;
-  margin-top: 18px;
   max-width: 720px;
 }
 
@@ -136,15 +135,15 @@ h2 {
   max-width: 620px;
   color: var(--muted);
   line-height: 1.7;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   margin-top: 24px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 36px;
   flex-wrap: wrap;
+  margin-top: 34px;
 }
 
 .btn-primary,
@@ -176,16 +175,16 @@ h2 {
 
 .hero-tags {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   margin-top: 28px;
 }
 
 .hero-tags span {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.06);
   padding: 10px 14px;
   border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.05);
   color: var(--muted);
   font-size: .92rem;
 }
@@ -200,9 +199,9 @@ h2 {
 
 .can-glow {
   position: absolute;
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle, rgba(243,107,31,.25), transparent 70%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(243,107,31,.22), transparent 70%);
   filter: blur(40px);
 }
 
@@ -210,14 +209,14 @@ h2 {
   width: 280px;
   height: 560px;
   border-radius: 40px;
-  background: linear-gradient(180deg, #1a1a1a, #090909);
+  background: linear-gradient(180deg, #1b1b1b, #090909);
   border: 1px solid rgba(255,255,255,.08);
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,.5);
+  box-shadow: 0 30px 90px rgba(0,0,0,.5);
 }
 
 .can-top {
@@ -230,18 +229,18 @@ h2 {
 }
 
 .can-text {
+  transform: rotate(-90deg);
   font-family: 'Anton', sans-serif;
   font-size: 4rem;
-  transform: rotate(-90deg);
-  letter-spacing: .06em;
+  letter-spacing: .08em;
 }
 
 .can-bottom {
   position: absolute;
   bottom: 24px;
   color: var(--orange);
-  letter-spacing: .14em;
-  font-size: .75rem;
+  font-size: .72rem;
+  letter-spacing: .18em;
 }
 
 /* FEATURES */
@@ -258,13 +257,13 @@ h2 {
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 32px;
-  backdrop-filter: blur(14px);
   transition: .25s ease;
+  backdrop-filter: blur(10px);
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(243,107,31,.35);
+  border-color: rgba(243,107,31,.3);
 }
 
 .feature-icon {
@@ -274,7 +273,7 @@ h2 {
 
 .feature-card h3 {
   font-family: 'Anton', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .feature-card p {
@@ -289,21 +288,20 @@ h2 {
 }
 
 .mission-panel {
+  padding: 60px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
   background: linear-gradient(
     180deg,
     rgba(255,255,255,.04),
     rgba(255,255,255,.02)
   );
-
-  border: 1px solid var(--border);
-  border-radius: 30px;
-  padding: 60px;
 }
 
 .mission-panel p {
   color: var(--muted);
   line-height: 1.8;
-  max-width: 800px;
+  max-width: 760px;
 }
 
 /* SIGNUP */
@@ -313,10 +311,10 @@ h2 {
 }
 
 .signup-box {
+  padding: 60px;
+  border-radius: 30px;
   background: linear-gradient(180deg, #121212, #090909);
   border: 1px solid var(--border);
-  border-radius: 30px;
-  padding: 60px;
   text-align: center;
 }
 
@@ -364,8 +362,8 @@ h2 {
 
 .tiny-note {
   margin-top: 14px;
+  font-size: .84rem;
   color: var(--muted);
-  font-size: .85rem;
 }
 
 /* MOBILE */
