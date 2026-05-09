@@ -244,10 +244,10 @@ h2 {
   font-size: .75rem;
 }
 
-/* FEATURES */
+/* VALUE CARDS */
 
 .features {
-  padding: 40px 5% 120px;
+  padding: 20px 5% 120px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 24px;
@@ -289,7 +289,12 @@ h2 {
 }
 
 .mission-panel {
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.02)
+  );
+
   border: 1px solid var(--border);
   border-radius: 30px;
   padding: 60px;
@@ -382,6 +387,10 @@ h2 {
   .mission-panel,
   .signup-box {
     padding: 36px 24px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
   }
 
 }
