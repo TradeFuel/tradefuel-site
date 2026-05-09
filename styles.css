@@ -7,8 +7,14 @@
   --border: #2a2a2a;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -16,7 +22,12 @@ body {
   font-family: 'Oswald', Arial, sans-serif;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= HERO ================= */
 
 .hero {
   min-height: 100vh;
@@ -26,6 +37,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(180deg, #111, #080808);
 }
 
+/* layout containers */
 .topbar,
 .hero-inner,
 .value-strip,
@@ -36,6 +48,8 @@ a { text-decoration: none; color: inherit; }
   max-width: 1240px;
   margin: 0 auto;
 }
+
+/* ================= TOPBAR ================= */
 
 .topbar {
   display: flex;
@@ -63,7 +77,10 @@ a { text-decoration: none; color: inherit; }
   color: var(--orange);
 }
 
-.brand-mark.small { width: 40px; height: 40px; }
+.brand-mark.small {
+  width: 40px;
+  height: 40px;
+}
 
 .brand-name {
   font-family: 'Anton', sans-serif;
@@ -87,6 +104,8 @@ a { text-decoration: none; color: inherit; }
   font-size: .92rem;
 }
 
+/* ================= HERO CONTENT ================= */
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
@@ -104,7 +123,9 @@ a { text-decoration: none; color: inherit; }
   margin: 0 0 10px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-family: 'Anton', sans-serif;
   line-height: .95;
@@ -120,15 +141,25 @@ h2 {
   letter-spacing: .02em;
 }
 
-h3 { font-size: 1.55rem; }
+h3 {
+  font-size: 1.55rem;
+}
+
+.hero-copy h2 {
+  max-width: 700px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
 
 .subhead {
-  max-width: 560px;
+  max-width: 620px;
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.6;
   margin: 18px 0 26px;
 }
+
+/* ================= BUTTONS ================= */
 
 .hero-actions {
   display: flex;
@@ -144,6 +175,7 @@ h3 { font-size: 1.55rem; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .05em;
+  transition: .2s ease;
 }
 
 .btn.primary {
@@ -151,10 +183,21 @@ h3 { font-size: 1.55rem; }
   color: #111;
 }
 
+.btn.primary:hover {
+  opacity: .92;
+}
+
 .btn.secondary {
   background: transparent;
   color: var(--text);
 }
+
+.btn.secondary:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* ================= HERO POINTS ================= */
 
 .hero-points {
   display: flex;
@@ -166,7 +209,11 @@ h3 { font-size: 1.55rem; }
   font-size: .9rem;
 }
 
-.hero-points span { color: var(--orange); }
+.hero-points span {
+  color: var(--orange);
+}
+
+/* ================= HERO VISUAL ================= */
 
 .hero-visual {
   display: flex;
@@ -184,7 +231,6 @@ h3 { font-size: 1.55rem; }
   position: relative;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -223,6 +269,8 @@ h3 { font-size: 1.55rem; }
   background: var(--orange);
 }
 
+/* ================= VALUE STRIP ================= */
+
 .value-strip {
   padding: 26px 22px 12px;
   display: grid;
@@ -258,6 +306,8 @@ h3 { font-size: 1.55rem; }
   font-size: 1.02rem;
 }
 
+/* ================= FEATURE GRID ================= */
+
 .feature-grid {
   padding: 28px 22px;
   display: grid;
@@ -273,9 +323,18 @@ h3 { font-size: 1.55rem; }
   overflow: hidden;
 }
 
-.feature-panel.dark { background: #101010; }
-.feature-panel.light { background: #f1f1f1; color: #111; }
-.feature-panel.light p { color: #444; }
+.feature-panel.dark {
+  background: #101010;
+}
+
+.feature-panel.light {
+  background: #f1f1f1;
+  color: #111;
+}
+
+.feature-panel.light p {
+  color: #444;
+}
 
 .image-panel {
   display: flex;
@@ -296,6 +355,8 @@ h3 { font-size: 1.55rem; }
   color: #111;
   border-color: #111;
 }
+
+/* ================= MISSION ================= */
 
 .mission {
   padding: 46px 22px;
@@ -327,7 +388,11 @@ h3 { font-size: 1.55rem; }
     radial-gradient(circle at 60% 30%, rgba(255,255,255,.12), transparent 8%);
 }
 
-.mission-copy { padding: 10px 8px; }
+.mission-copy {
+  padding: 10px 8px;
+}
+
+/* ================= SIGNUP ================= */
 
 .signup {
   padding: 54px 22px 84px;
@@ -350,4 +415,78 @@ h3 { font-size: 1.55rem; }
 }
 
 .signup-form input {
-  w
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f0f0f;
+  color: var(--text);
+  width: min(320px, 90%);
+  font-size: 1rem;
+}
+
+.signup-form button {
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  background: var(--orange);
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  padding: 30px 22px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  .hero-inner,
+  .feature-grid,
+  .mission,
+  .value-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navlinks,
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 16vw, 5rem);
+  }
+
+  h2 {
+    line-height: 1.05;
+  }
+
+  .hero {
+    padding-bottom: 60px;
+  }
+
+  .mockup-frame {
+    max-width: 340px;
+  }
+
+  .signup-card {
+    padding: 30px 22px;
+  }
+
+}
