@@ -27,7 +27,7 @@ a {
   color: inherit;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
   min-height: 100vh;
@@ -37,7 +37,6 @@ a {
     linear-gradient(180deg, #111, #080808);
 }
 
-/* layout containers */
 .topbar,
 .hero-inner,
 .value-strip,
@@ -49,7 +48,7 @@ a {
   margin: 0 auto;
 }
 
-/* ================= TOPBAR ================= */
+/* TOPBAR */
 
 .topbar {
   display: flex;
@@ -104,7 +103,7 @@ a {
   font-size: .92rem;
 }
 
-/* ================= HERO CONTENT ================= */
+/* HERO CONTENT */
 
 .hero-inner {
   display: grid;
@@ -128,17 +127,17 @@ h2,
 h3 {
   margin: 0;
   font-family: 'Anton', sans-serif;
-  line-height: .95;
 }
 
 h1 {
   font-size: clamp(4rem, 11vw, 8rem);
-  letter-spacing: .03em;
+  line-height: .9;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
-  letter-spacing: .02em;
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: .01em;
 }
 
 h3 {
@@ -146,26 +145,26 @@ h3 {
 }
 
 .hero-copy h2 {
-  max-width: 700px;
-  margin-top: 12px;
+  max-width: 680px;
+  margin-top: 14px;
   margin-bottom: 20px;
 }
 
 .subhead {
   max-width: 620px;
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin: 18px 0 26px;
+  margin-bottom: 28px;
 }
 
-/* ================= BUTTONS ================= */
+/* BUTTONS */
 
 .hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -175,7 +174,6 @@ h3 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .05em;
-  transition: .2s ease;
 }
 
 .btn.primary {
@@ -183,21 +181,12 @@ h3 {
   color: #111;
 }
 
-.btn.primary:hover {
-  opacity: .92;
-}
-
 .btn.secondary {
   background: transparent;
   color: var(--text);
 }
 
-.btn.secondary:hover {
-  border-color: var(--orange);
-  color: var(--orange);
-}
-
-/* ================= HERO POINTS ================= */
+/* HERO POINTS */
 
 .hero-points {
   display: flex;
@@ -213,7 +202,7 @@ h3 {
   color: var(--orange);
 }
 
-/* ================= HERO VISUAL ================= */
+/* HERO VISUAL */
 
 .hero-visual {
   display: flex;
@@ -227,7 +216,6 @@ h3 {
   border: 1px solid #333;
   border-radius: 30px;
   background: linear-gradient(180deg, #1b1b1b, #0d0d0d);
-  box-shadow: 0 20px 70px rgba(0,0,0,.4);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -246,17 +234,14 @@ h3 {
 .can-label {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, 8vw, 5rem);
-  color: var(--text);
   transform: rotate(-90deg);
-  letter-spacing: .05em;
 }
 
 .can-sub {
   position: absolute;
   bottom: 26px;
   color: var(--orange);
-  text-transform: uppercase;
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   font-size: .78rem;
 }
 
@@ -269,7 +254,7 @@ h3 {
   background: var(--orange);
 }
 
-/* ================= VALUE STRIP ================= */
+/* VALUE STRIP */
 
 .value-strip {
   padding: 26px 22px 12px;
@@ -290,10 +275,8 @@ h3 {
   height: 42px;
   border-radius: 12px;
   background: rgba(243,107,31,.14);
-  color: var(--orange);
   display: grid;
   place-items: center;
-  font-weight: 800;
   margin-bottom: 14px;
 }
 
@@ -303,10 +286,9 @@ h3 {
 .signup-card p {
   color: var(--muted);
   line-height: 1.65;
-  font-size: 1.02rem;
 }
 
-/* ================= FEATURE GRID ================= */
+/* FEATURE */
 
 .feature-grid {
   padding: 28px 22px;
@@ -319,8 +301,6 @@ h3 {
   border-radius: 18px;
   border: 1px solid var(--border);
   padding: 26px;
-  min-height: 220px;
-  overflow: hidden;
 }
 
 .feature-panel.dark {
@@ -332,31 +312,21 @@ h3 {
   color: #111;
 }
 
-.feature-panel.light p {
-  color: #444;
-}
-
 .image-panel {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .mini-product {
   font-family: 'Anton', sans-serif;
   font-size: 2.4rem;
-  color: var(--orange);
-  border: 2px solid var(--orange);
+  border: 2px solid #111;
   padding: 18px 24px;
   transform: rotate(-8deg);
 }
 
-.lightbox {
-  color: #111;
-  border-color: #111;
-}
-
-/* ================= MISSION ================= */
+/* MISSION */
 
 .mission {
   padding: 46px 22px;
@@ -372,27 +342,14 @@ h3 {
   border: 1px solid var(--border);
   background:
     linear-gradient(135deg, rgba(243,107,31,.22), transparent 45%),
-    radial-gradient(circle at 60% 30%, rgba(255,255,255,.08), transparent 30%),
     #151515;
-  position: relative;
-  overflow: hidden;
-}
-
-.spark {
-  position: absolute;
-  inset: auto 14% 18% 14%;
-  height: 36%;
-  background:
-    radial-gradient(circle at 40% 40%, rgba(243,107,31,.55), transparent 16%),
-    radial-gradient(circle at 30% 60%, rgba(243,107,31,.35), transparent 12%),
-    radial-gradient(circle at 60% 30%, rgba(255,255,255,.12), transparent 8%);
 }
 
 .mission-copy {
   padding: 10px 8px;
 }
 
-/* ================= SIGNUP ================= */
+/* SIGNUP */
 
 .signup {
   padding: 54px 22px 84px;
@@ -421,7 +378,6 @@ h3 {
   background: #0f0f0f;
   color: var(--text);
   width: min(320px, 90%);
-  font-size: 1rem;
 }
 
 .signup-form button {
@@ -432,11 +388,9 @@ h3 {
   color: #111;
   font-weight: 700;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: .05em;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 .footer {
   padding: 30px 22px;
@@ -447,7 +401,7 @@ h3 {
   border-top: 1px solid var(--border);
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
@@ -473,20 +427,12 @@ h3 {
     font-size: clamp(3rem, 16vw, 5rem);
   }
 
-  h2 {
-    line-height: 1.05;
-  }
-
   .hero {
     padding-bottom: 60px;
   }
 
   .mockup-frame {
     max-width: 340px;
-  }
-
-  .signup-card {
-    padding: 30px 22px;
   }
 
 }
