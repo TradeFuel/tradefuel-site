@@ -8,7 +8,6 @@ body {
   font-family: 'Oswald', sans-serif;
   background: #050607;
   color: white;
-  overflow-x: hidden;
 }
 
 /* BACKGROUND */
@@ -16,8 +15,8 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255,106,0,0.18), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 50%);
+    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.18), transparent 45%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.04), transparent 50%);
   z-index: 0;
 }
 
@@ -28,8 +27,8 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 18px 8%;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(14px);
   z-index: 10;
 }
 
@@ -48,32 +47,32 @@ body {
   padding: 10px 16px;
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 
 /* HERO */
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: 140px 8% 80px;
+  padding: 140px 8% 90px;
   gap: 60px;
-  position: relative;
-  z-index: 2;
 }
 
 .kicker {
   color: #ff6a00;
   letter-spacing: 2px;
+  font-size: 13px;
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.6rem;
   line-height: 1.05;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
 .sub {
-  color: #aaa;
-  max-width: 520px;
+  color: #a8a8a8;
+  max-width: 540px;
 }
 
 /* BUTTONS */
@@ -93,18 +92,19 @@ body {
 .secondary {
   border: 1px solid #333;
   padding: 12px 18px;
-  color: white;
   text-decoration: none;
+  color: white;
 }
 
+/* META */
 .meta {
   display: flex;
-  gap: 20px;
-  color: #aaa;
+  gap: 18px;
+  color: #9a9a9a;
   font-size: 14px;
 }
 
-/* PRODUCT */
+/* HERO PRODUCT */
 .hero-right {
   position: relative;
   height: 420px;
@@ -129,9 +129,10 @@ body {
 
 .tub {
   position: absolute;
-  width: 240px;
+  width: 250px;
   top: 90px;
   left: 70px;
+  z-index: 2;
 }
 
 .packet {
@@ -150,8 +151,13 @@ section {
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2.3rem;
+  margin-bottom: 18px;
+}
+
+p {
+  color: #b0b0b0;
+  line-height: 1.6;
 }
 
 .accent {
@@ -166,20 +172,20 @@ h2 {
 
 .card {
   background: #11151c;
-  padding: 20px;
-  flex: 1;
+  padding: 22px;
   text-align: center;
+  flex: 1;
 }
 
 .card img {
-  width: 160px;
+  width: 170px;
 }
 
-/* INVESTOR */
+/* INVESTOR GRID */
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .grid3 div {
@@ -196,6 +202,7 @@ h2 {
 .signup input {
   padding: 12px;
   width: 260px;
+  border: none;
 }
 
 .signup button {
@@ -205,10 +212,10 @@ h2 {
   color: white;
 }
 
-/* REVEAL ANIMATION */
+/* REVEAL */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(18px);
   transition: 0.8s ease;
 }
 
