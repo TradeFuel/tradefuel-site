@@ -2,17 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("TRADEFUEL LIVE");
 
-  // smooth scroll
+  /* SMOOTH SCROLL */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", e => {
       e.preventDefault();
-      document.querySelector(a.getAttribute("href"))?.scrollIntoView({
-        behavior: "smooth"
-      });
+      const target = document.querySelector(a.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
 
-  // hover lift
+  /* HOVER LIFT */
   document.querySelectorAll("button, a").forEach(el => {
     el.addEventListener("mouseenter", () => {
       el.style.transform = "translateY(-2px)";
@@ -22,17 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // scroll reveal
-  const observer = new IntersectionObserver(entries => {
+  /* SCROLL REVEAL */
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
       }
     });
+  }, {
+    threshold: 0.15
   });
 
-  document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll(".feature-card, .product-card, .mission-box, .signup-box")
+    .forEach(el => observer.observe(el));
 
 });
