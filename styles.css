@@ -1,3 +1,7 @@
+/* =========================
+GLOBAL
+========================= */
+
 *{
   margin:0;
   padding:0;
@@ -11,41 +15,42 @@ html{
 body{
   font-family:'Inter',sans-serif;
   background:#0f1115;
-  color:white;
+  color:#ffffff;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  padding:30px 8%;
-
-  background:
-  radial-gradient(circle at top right, rgba(255,140,0,.18), transparent 30%),
-  linear-gradient(135deg,#0f1115,#171b22);
-}
+/* =========================
+NAVBAR
+========================= */
 
 .navbar{
+  width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:80px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  padding:24px 8%;
+  transition:all 0.35s ease;
 }
 
 .logo{
+  font-size:1.15rem;
   font-weight:800;
-  font-size:1.2rem;
   letter-spacing:1px;
 }
 
 .nav-btn{
   text-decoration:none;
   color:white;
-  border:1px solid rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,0.15);
   padding:12px 20px;
-  border-radius:10px;
-  transition:.3s;
+  border-radius:12px;
+  transition:all 0.25s ease;
+  font-weight:600;
 }
 
 .nav-btn:hover{
@@ -53,46 +58,61 @@ body{
   border-color:#ff7a00;
 }
 
+/* =========================
+HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+  padding:140px 8% 100px;
+
+  background:
+  radial-gradient(circle at top right, rgba(255,122,0,0.18), transparent 30%),
+  linear-gradient(135deg,#0f1115,#171b22);
+}
+
 .hero-content{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:60px;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:70px;
   align-items:center;
 }
 
 .tag{
   color:#ff9500;
+  font-size:0.9rem;
   font-weight:700;
   text-transform:uppercase;
-  margin-bottom:20px;
   letter-spacing:2px;
+  margin-bottom:22px;
 }
 
 .hero-text h1{
-  font-size:4rem;
+  font-size:4.5rem;
   line-height:1.05;
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 .subtext{
+  max-width:620px;
   color:#b8bec8;
-  max-width:600px;
-  margin-bottom:35px;
-  font-size:1.1rem;
+  font-size:1.15rem;
+  margin-bottom:40px;
 }
 
 .hero-buttons{
   display:flex;
-  gap:15px;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 .primary-btn,
 .secondary-btn{
   text-decoration:none;
-  padding:16px 24px;
-  border-radius:12px;
+  padding:16px 28px;
+  border-radius:14px;
   font-weight:700;
-  transition:.3s;
+  transition:all 0.25s ease;
 }
 
 .primary-btn{
@@ -100,50 +120,48 @@ body{
   color:white;
 }
 
-.primary-btn:hover{
-  transform:translateY(-2px);
-}
-
 .secondary-btn{
-  border:1px solid rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,0.15);
   color:white;
 }
 
 .secondary-btn:hover{
-  background:rgba(255,255,255,.08);
+  background:rgba(255,255,255,0.06);
 }
 
-/* HERO CARD */
+/* =========================
+HERO CARD
+========================= */
 
 .hero-card{
-  background:#171c24;
-  border:1px solid rgba(255,255,255,.08);
-  padding:40px;
-  border-radius:24px;
   position:relative;
+  background:#171c24;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:28px;
+  padding:45px;
   overflow:hidden;
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  box-shadow:0 20px 60px rgba(0,0,0,0.35);
 }
 
 .card-glow{
   position:absolute;
-  width:220px;
-  height:220px;
+  width:240px;
+  height:240px;
   background:#ff7a00;
   filter:blur(120px);
-  opacity:.25;
-  top:-80px;
-  right:-60px;
+  opacity:0.22;
+  top:-90px;
+  right:-70px;
 }
 
 .hero-card h3{
   font-size:2rem;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 .hero-card p{
   color:#b8bec8;
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 .hero-card ul{
@@ -151,29 +169,31 @@ body{
 }
 
 .hero-card li{
-  margin-bottom:12px;
-  color:#d7dde6;
+  margin-bottom:14px;
+  color:#d6dde7;
 }
 
-/* FEATURES */
+/* =========================
+FEATURES
+========================= */
 
 .features{
-  padding:100px 8%;
+  padding:110px 8%;
   background:#12161d;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:70px;
 }
 
 .section-title h2{
-  font-size:2.5rem;
-  margin-bottom:10px;
+  font-size:2.8rem;
+  margin-bottom:14px;
 }
 
 .section-title p{
-  color:#b8bec8;
+  color:#aeb6c2;
 }
 
 .feature-grid{
@@ -184,50 +204,57 @@ body{
 
 .feature-card{
   background:#1a2029;
-  padding:35px;
-  border-radius:18px;
-  border:1px solid rgba(255,255,255,.06);
-  transition:.3s;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:38px;
+  border-radius:22px;
+  transition:all 0.3s ease;
 }
 
 .feature-card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-8px);
 }
 
 .feature-card h3{
-  margin-bottom:15px;
+  margin-bottom:16px;
   color:#ff9500;
+  font-size:1.4rem;
 }
 
-/* SIGNUP */
+.feature-card p{
+  color:#c0c7d2;
+}
+
+/* =========================
+SIGNUP
+========================= */
 
 .signup-section{
-  padding:100px 8%;
+  padding:110px 8%;
 }
 
 .signup-box{
-  max-width:700px;
+  max-width:760px;
   margin:auto;
   background:#171c24;
-  padding:60px;
-  border-radius:24px;
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:28px;
+  padding:65px;
   text-align:center;
-  border:1px solid rgba(255,255,255,.08);
 }
 
 .signup-box h2{
-  font-size:2.5rem;
-  margin-bottom:15px;
+  font-size:2.7rem;
+  margin-bottom:16px;
 }
 
 .signup-box p{
   color:#b8bec8;
-  margin-bottom:30px;
+  margin-bottom:34px;
 }
 
 .form{
   display:flex;
-  gap:15px;
+  gap:16px;
   flex-wrap:wrap;
   justify-content:center;
 }
@@ -235,45 +262,62 @@ body{
 input{
   flex:1;
   min-width:260px;
-  padding:16px;
-  border-radius:12px;
+  padding:18px;
   border:none;
+  border-radius:14px;
   background:#0f1115;
   color:white;
   font-size:1rem;
 }
 
+input:focus{
+  outline:2px solid #ff7a00;
+}
+
 button{
-  padding:16px 28px;
   border:none;
-  border-radius:12px;
+  padding:18px 30px;
+  border-radius:14px;
   background:#ff7a00;
   color:white;
   font-weight:700;
   cursor:pointer;
-  transition:.3s;
+  transition:all 0.25s ease;
 }
 
 button:hover{
-  opacity:.9;
+  opacity:0.92;
 }
 
 small{
   display:block;
-  margin-top:20px;
-  color:#8b94a3;
+  margin-top:22px;
+  color:#8c95a2;
 }
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 
 footer{
+  padding:45px;
   text-align:center;
-  padding:40px;
-  border-top:1px solid rgba(255,255,255,.06);
-  color:#7e8794;
+  border-top:1px solid rgba(255,255,255,0.06);
+  color:#7f8896;
 }
 
-/* MOBILE */
+/* =========================
+PERFORMANCE
+========================= */
+
+.resize-animation-stopper *{
+  animation:none !important;
+  transition:none !important;
+}
+
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:900px){
 
@@ -282,11 +326,15 @@ footer{
   }
 
   .hero-text h1{
-    font-size:3rem;
+    font-size:3.2rem;
   }
 
   .signup-box{
-    padding:40px 25px;
+    padding:45px 28px;
+  }
+
+  .section-title h2{
+    font-size:2.2rem;
   }
 
 }
