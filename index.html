@@ -13,6 +13,10 @@
 
 <body>
 
+<!-- BACKGROUND LAYERS -->
+<div class="bg-glow"></div>
+<div class="grain"></div>
+
 <!-- NAV -->
 <nav class="nav">
   <div class="brand">
@@ -26,56 +30,87 @@
 <!-- HERO -->
 <header class="hero">
 
-  <div class="hero-left">
+  <div class="hero-grid">
 
-    <p class="kicker">FUEL FOR THE TRADES</p>
+    <!-- LEFT -->
+    <div class="hero-left">
 
-    <h1>
-      FUEL FOR WHEN THE SHIFT<br>
-      DOESN’T CARE HOW TIRED YOU ARE.
-    </h1>
+      <p class="kicker">FUEL FOR THE TRADES</p>
 
-    <p class="sub">
-      Built for roofers, welders, framers, mechanics, and crews working long physical shifts in extreme conditions.
-    </p>
+      <h1>
+        FUEL FOR WHEN THE SHIFT<br>
+        DOESN’T CARE HOW TIRED YOU ARE.
+      </h1>
 
-    <div class="buttons">
-      <a href="#signup" class="btn-primary">Join the Crew</a>
-      <a href="#products" class="btn-secondary">View Product System</a>
+      <p class="sub">
+        Built for roofers, welders, framers, mechanics, pipefitters, and crews working in extreme physical conditions.
+      </p>
+
+      <div class="cta-row">
+        <a href="#signup" class="btn-primary">Join the Crew</a>
+        <a href="#products" class="btn-secondary">Explore System</a>
+      </div>
+
+      <div class="meta">
+        <div>⚡ Clean Energy</div>
+        <div>🧊 Hydration</div>
+        <div>⛑ Built for Work</div>
+      </div>
+
     </div>
 
-    <div class="stats">
-      <div>⚡ Clean Energy</div>
-      <div>🧊 Hydration</div>
-      <div>⛑ Built for Work</div>
+    <!-- RIGHT PRODUCT STAGE -->
+    <div class="hero-right">
+
+      <div class="light-ring"></div>
+
+      <img src="Logo.jpg" class="logo-float">
+      <img src="Tub.jpg" class="tub">
+      <img src="Packet.jpg" class="packet">
+
     </div>
-
-  </div>
-
-  <!-- HERO PRODUCT -->
-  <div class="hero-right">
-
-    <div class="glow"></div>
-
-    <img src="Logo.jpg" class="logo-float">
-    <img src="Tub.jpg" class="tub">
-    <img src="Packet.jpg" class="packet">
 
   </div>
 
 </header>
 
-<!-- PRODUCT STRIP -->
-<section class="strip" id="products">
+<!-- STORY STRIP -->
+<section class="story">
 
-  <div class="box">
-    <img src="Tub.jpg">
-    <h3>Hydration System</h3>
+  <div class="story-card">
+    <h2>NOT OFFICE ENERGY</h2>
+    <p>Built for sweat, heat, fatigue, and long physical shifts.</p>
   </div>
 
-  <div class="box">
-    <img src="Packet.jpg">
-    <h3>On-the-Go Fuel</h3>
+  <div class="story-card highlight">
+    <h2>REAL WORK</h2>
+    <p>Energy designed for people who actually build things.</p>
+  </div>
+
+  <div class="story-card">
+    <h2>NO CRASH</h2>
+    <p>Stable energy that lasts through the entire shift.</p>
+  </div>
+
+</section>
+
+<!-- PRODUCT -->
+<section id="products" class="products">
+
+  <h2>TRADEFUEL SYSTEM</h2>
+
+  <div class="product-showcase">
+
+    <div class="product-item">
+      <img src="Tub.jpg">
+      <h3>Hydration Tub</h3>
+    </div>
+
+    <div class="product-item">
+      <img src="Packet.jpg">
+      <h3>Field Packets</h3>
+    </div>
+
   </div>
 
 </section>
@@ -85,27 +120,31 @@
 
   <h2>OUR MISSION</h2>
 
-  <p class="highlight">
+  <p class="accent">
     Build energy that respects physical labor.
   </p>
 
   <p>
-    TradeFuel exists for tradespeople pushing through heat, fatigue, and long shifts where performance matters more than comfort.
+    TradeFuel exists for tradespeople pushing through heat, exhaustion, and long shifts where performance matters more than comfort.
   </p>
 
 </section>
 
 <!-- SIGNUP -->
-<section class="signup" id="signup">
+<section id="signup" class="signup">
 
-  <h2>JOIN THE FIRST CREW</h2>
+  <div class="signup-box">
 
-  <p>Get early access to launch pricing + first production batch.</p>
+    <h2>JOIN THE FIRST CREW</h2>
 
-  <form action="https://formspree.io/f/mnjwgbwe" method="POST">
-    <input type="email" name="email" placeholder="Enter email" required>
-    <button type="submit">Request Access</button>
-  </form>
+    <p>Get early access + launch pricing.</p>
+
+    <form action="https://formspree.io/f/mnjwgbwe" method="POST">
+      <input type="email" name="email" placeholder="Enter email" required>
+      <button type="submit">Request Access</button>
+    </form>
+
+  </div>
 
 </section>
 
