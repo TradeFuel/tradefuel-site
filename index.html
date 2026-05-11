@@ -5,103 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CREW QUENCHERS™ | TradeFuel™</title>
-
-  <meta name="description" content="TradeFuel™ hydration and energy built for hardworking tradespeople.">
+  <title>TradeFuel™ | Fuel for the Trades</title>
 
   <link rel="stylesheet" href="styles.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <!-- NAV -->
-<nav class="navbar">
-
-  <div class="nav-left">
-    <img src="Logo.jpg" class="logo-img" alt="Logo">
-    <div class="logo-text">CREW QUENCHERS™</div>
+<nav class="nav">
+  <div class="brand">
+    <img src="Logo.jpg" class="logo">
+    <span>TRADEFUEL™</span>
   </div>
 
-  <a href="#signup" class="nav-btn">Join Early Access</a>
-
+  <a href="#signup" class="nav-cta">JOIN EARLY ACCESS</a>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
 
-  <div class="hero-content">
+  <div class="hero-left">
 
-    <div class="hero-text">
+    <p class="kicker">FUEL FOR THE TRADES</p>
 
-      <p class="tag">FUEL FOR THE TRADES™</p>
+    <h1>
+      FUEL FOR WHEN THE SHIFT<br>
+      DOESN’T CARE HOW TIRED YOU ARE.
+    </h1>
 
-      <h1>BUILT FOR LONG DAYS.<br>MADE FOR THE CREW.</h1>
+    <p class="sub">
+      Built for roofers, welders, framers, mechanics, and crews working long physical shifts in extreme conditions.
+    </p>
 
-      <p class="subtext">
-        TradeFuel™ delivers hydration, energy, and focus for hardworking tradespeople operating in real conditions.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#signup" class="primary-btn">Join The Crew</a>
-        <a href="#products" class="secondary-btn">View Products</a>
-      </div>
-
+    <div class="buttons">
+      <a href="#signup" class="btn-primary">Join the Crew</a>
+      <a href="#products" class="btn-secondary">View Product System</a>
     </div>
 
-    <!-- PRODUCT STACK -->
-    <div class="hero-product-stack">
-
-      <div class="product-glow"></div>
-
-      <img src="Logo.jpg" class="product-logo" alt="Logo">
-      <img src="Tub.jpg" class="product-tub" alt="Tub">
-      <img src="Packet.jpg" class="product-packet" alt="Packet">
-
+    <div class="stats">
+      <div>⚡ Clean Energy</div>
+      <div>🧊 Hydration</div>
+      <div>⛑ Built for Work</div>
     </div>
+
+  </div>
+
+  <!-- HERO PRODUCT -->
+  <div class="hero-right">
+
+    <div class="glow"></div>
+
+    <img src="Logo.jpg" class="logo-float">
+    <img src="Tub.jpg" class="tub">
+    <img src="Packet.jpg" class="packet">
 
   </div>
 
 </header>
 
-<!-- FEATURES -->
-<section class="features">
+<!-- PRODUCT STRIP -->
+<section class="strip" id="products">
 
-  <div class="feature-card">
-    <h3>HYDRATION</h3>
-    <p>Replace what long shifts take out of you.</p>
+  <div class="box">
+    <img src="Tub.jpg">
+    <h3>Hydration System</h3>
   </div>
 
-  <div class="feature-card">
-    <h3>FOCUS</h3>
-    <p>Clean energy without crash or burnout.</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>ENDURANCE</h3>
-    <p>Built for heat, sweat, and jobsite pressure.</p>
-  </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-
-  <h2 class="section-title">TRADEFUEL SYSTEM</h2>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <img src="Tub.jpg" alt="Tub">
-      <h3>Hydration Tub</h3>
-    </div>
-
-    <div class="product-card">
-      <img src="Packet.jpg" alt="Packet">
-      <h3>On-the-Go Packets</h3>
-    </div>
-
+  <div class="box">
+    <img src="Packet.jpg">
+    <h3>On-the-Go Fuel</h3>
   </div>
 
 </section>
@@ -109,49 +83,34 @@
 <!-- MISSION -->
 <section class="mission">
 
-  <div class="mission-box">
+  <h2>OUR MISSION</h2>
 
-    <h2>OUR MISSION</h2>
+  <p class="highlight">
+    Build energy that respects physical labor.
+  </p>
 
-    <p class="highlight">Fuel the people who build the world.</p>
-
-    <p>
-      TradeFuel is built for roofers, welders, framers, mechanics, and pipefitters working long hours in real conditions.
-    </p>
-
-    <p class="strong">
-      This isn’t office energy. This is jobsite fuel.
-    </p>
-
-  </div>
+  <p>
+    TradeFuel exists for tradespeople pushing through heat, fatigue, and long shifts where performance matters more than comfort.
+  </p>
 
 </section>
 
 <!-- SIGNUP -->
 <section class="signup" id="signup">
 
-  <div class="signup-box">
+  <h2>JOIN THE FIRST CREW</h2>
 
-    <h2>JOIN THE CREW</h2>
+  <p>Get early access to launch pricing + first production batch.</p>
 
-    <p>Get early access before launch.</p>
-
-    <form action="https://formspree.io/f/mnjwgbwe" method="POST">
-
-      <input type="email" name="email" placeholder="Enter your email" required>
-
-      <button type="submit">Join Now</button>
-
-    </form>
-
-    <p class="note">No spam. Just launch updates.</p>
-
-  </div>
+  <form action="https://formspree.io/f/mnjwgbwe" method="POST">
+    <input type="email" name="email" placeholder="Enter email" required>
+    <button type="submit">Request Access</button>
+  </form>
 
 </section>
 
 <footer>
-  <p>© 2026 CREW QUENCHERS™ | TradeFuel™</p>
+  <p>© TradeFuel™ — Built for the Trades</p>
 </footer>
 
 <script src="script.js"></script>
