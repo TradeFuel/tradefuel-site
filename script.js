@@ -10,14 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // simple hover lift (safe)
-  document.querySelectorAll("button, a").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-      el.style.transform = "translateY(-2px)";
-    });
-    el.addEventListener("mouseleave", () => {
-      el.style.transform = "translateY(0)";
-    });
-  });
-
 });
