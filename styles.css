@@ -5,129 +5,129 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #0b0d10;
+  font-family: 'Oswald', sans-serif;
+  background: #07080a;
   color: white;
 }
 
 /* NAV */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
+.nav {
   position: fixed;
   width: 100%;
-  z-index: 999;
-  background: rgba(10,10,10,0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(12px);
+  z-index: 1000;
 }
 
-.nav-left {
+.brand {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo-img {
-  width: 40px;
+.logo {
+  width: 38px;
 }
 
-.logo-text {
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.nav-btn {
-  background: #ff7a00;
+.nav-cta {
+  background: #ff6a00;
   padding: 10px 16px;
-  border-radius: 10px;
   color: white;
   text-decoration: none;
+  font-weight: 700;
 }
 
 /* HERO */
 .hero {
-  padding: 140px 8% 80px;
-}
-
-.hero-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 140px 8% 80px;
   gap: 60px;
 }
 
-.tag {
-  color: #ff7a00;
-  font-weight: 700;
+.kicker {
+  color: #ff6a00;
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
   margin: 20px 0;
 }
 
-.subtext {
-  color: #b8bec8;
+.sub {
+  color: #aaa;
   max-width: 520px;
+  margin-bottom: 25px;
 }
 
-.hero-buttons {
+/* BUTTONS */
+.buttons {
   display: flex;
   gap: 12px;
-  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-.primary-btn {
-  background: #ff7a00;
+.btn-primary {
+  background: #ff6a00;
   padding: 12px 18px;
-  border-radius: 10px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
-.secondary-btn {
+.btn-secondary {
   border: 1px solid #333;
   padding: 12px 18px;
-  border-radius: 10px;
   color: white;
   text-decoration: none;
 }
 
-/* PRODUCT STACK */
-.hero-product-stack {
+/* STATS */
+.stats {
+  display: flex;
+  gap: 20px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* HERO RIGHT */
+.hero-right {
   position: relative;
-  width: 350px;
+  width: 380px;
   height: 420px;
 }
 
-.product-glow {
+.glow {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(circle, rgba(255,122,0,0.25), transparent 60%);
-  filter: blur(30px);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,106,0,0.25), transparent);
+  filter: blur(40px);
   top: 80px;
   left: 40px;
 }
 
-.product-logo {
+.logo-float {
   position: absolute;
-  top: 0;
-  left: 120px;
   width: 80px;
+  top: 0;
+  left: 140px;
 }
 
-.product-tub {
+.tub {
   position: absolute;
   width: 220px;
   top: 90px;
-  left: 70px;
+  left: 80px;
   z-index: 2;
 }
 
-.product-packet {
+.packet {
   position: absolute;
   width: 120px;
   bottom: 40px;
@@ -135,43 +135,22 @@ body {
   transform: rotate(-10deg);
 }
 
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 80px 8%;
-  gap: 20px;
-}
-
-.feature-card {
-  background: #151922;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-/* PRODUCTS */
-.products {
-  padding: 80px 8%;
-}
-
-.section-title {
-  margin-bottom: 30px;
-}
-
-.product-grid {
+/* PRODUCT STRIP */
+.strip {
   display: flex;
   gap: 30px;
+  padding: 80px 8%;
 }
 
-.product-card {
-  background: #151922;
+.box {
+  background: #11151c;
   padding: 20px;
-  border-radius: 12px;
   text-align: center;
+  flex: 1;
 }
 
-.product-card img {
-  width: 180px;
+.box img {
+  width: 160px;
 }
 
 /* MISSION */
@@ -179,15 +158,8 @@ body {
   padding: 80px 8%;
 }
 
-.mission-box {
-  background: #0f1218;
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid #222;
-}
-
 .highlight {
-  color: #ff7a00;
+  color: #ff6a00;
   margin: 10px 0;
 }
 
@@ -197,18 +169,15 @@ body {
   text-align: center;
 }
 
-.signup-box input {
+.signup input {
   padding: 12px;
-  border-radius: 10px;
+  width: 260px;
   border: none;
-  width: 250px;
 }
 
-button {
+.signup button {
   padding: 12px 16px;
-  background: #ff7a00;
+  background: #ff6a00;
   border: none;
   color: white;
-  border-radius: 10px;
-  margin-left: 10px;
 }
