@@ -10,4 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // subtle hover lift
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      el.style.transform = "translateY(-2px)";
+      el.style.transition = "0.2s";
+    });
+
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "translateY(0)";
+    });
+  });
+
 });
