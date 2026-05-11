@@ -223,3 +223,15 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+.hero-promise {
+  margin-top: 10px;
+  color: #ff6a00;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.signup-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
