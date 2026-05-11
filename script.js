@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const elements = document.querySelectorAll(".reveal");
+  const items = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -10,9 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.15 });
 
-  elements.forEach(el => observer.observe(el));
+  items.forEach(el => observer.observe(el));
 
-  // smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", e => {
       e.preventDefault();
