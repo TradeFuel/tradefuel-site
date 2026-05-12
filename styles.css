@@ -70,6 +70,13 @@ body {
   margin: 18px 0;
 }
 
+.hero-promise {
+  margin-top: 10px;
+  color: #ff6a00;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .sub {
   color: #a8a8a8;
   max-width: 540px;
@@ -87,6 +94,7 @@ body {
   padding: 12px 18px;
   text-decoration: none;
   color: white;
+  display: inline-block;
 }
 
 .secondary {
@@ -94,6 +102,7 @@ body {
   padding: 12px 18px;
   text-decoration: none;
   color: white;
+  display: inline-block;
 }
 
 /* META */
@@ -210,6 +219,22 @@ p {
   background: #ff6a00;
   border: none;
   color: white;
+  cursor: pointer;
+}
+
+.survey-btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid #333;
+  color: white;
+  text-decoration: none;
+}
+
+.signup-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
 }
 
 /* REVEAL */
@@ -222,16 +247,4 @@ p {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-}
-.hero-promise {
-  margin-top: 10px;
-  color: #ff6a00;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.signup-note {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #888;
 }
