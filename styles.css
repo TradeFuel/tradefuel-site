@@ -8,17 +8,16 @@ body {
   font-family: 'Oswald', sans-serif;
   background: #050607;
   color: white;
-  overflow-x: hidden;
 }
 
-/* BACKGROUND DEPTH */
+/* BACKGROUND */
 .bg {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(255,106,0,0.16), transparent 45%),
-    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.03), transparent 50%),
-    radial-gradient(circle at 50% 90%, rgba(255,106,0,0.08), transparent 60%);
+    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.18), transparent 45%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.04), transparent 50%);
+  z-index: 0;
 }
 
 /* NAV */
@@ -28,12 +27,20 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 18px 8%;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(14px);
   z-index: 10;
 }
 
-.logo { width: 38px; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 38px;
+}
 
 .cta {
   background: #ff6a00;
@@ -47,22 +54,32 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: 140px 8% 100px;
+  padding: 140px 8% 90px;
   gap: 60px;
-  align-items: center;
 }
 
-/* LEFT */
-.hero-left h1 {
-  font-size: 3.4rem;
+.kicker {
+  color: #ff6a00;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
   line-height: 1.05;
   margin: 18px 0;
 }
 
+.hero-promise {
+  margin-top: 10px;
+  color: #ff6a00;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .sub {
-  color: #aaa;
-  max-width: 520px;
-  line-height: 1.6;
+  color: #a8a8a8;
+  max-width: 540px;
 }
 
 /* BUTTONS */
@@ -75,61 +92,71 @@ body {
 .primary {
   background: #ff6a00;
   padding: 12px 18px;
-  color: white;
   text-decoration: none;
-  font-weight: 600;
+  color: white;
+  display: inline-block;
 }
 
 .secondary {
   border: 1px solid #333;
   padding: 12px 18px;
-  color: white;
   text-decoration: none;
+  color: white;
+  display: inline-block;
 }
 
 /* META */
 .meta {
   display: flex;
   gap: 18px;
-  color: #999;
+  color: #9a9a9a;
   font-size: 14px;
 }
 
-/* RIGHT STACK (CLEAN + CONTROLLED) */
+/* HERO PRODUCT */
 .hero-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  height: 420px;
 }
 
 .glow {
   position: absolute;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(255,106,0,0.22), transparent);
-  filter: blur(70px);
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(255,106,0,0.25), transparent);
+  filter: blur(50px);
+  top: 60px;
+  left: 40px;
 }
 
-.stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  position: relative;
+.logo-float {
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 140px;
 }
 
-/* PRODUCTS */
-.product {
-  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.6));
+.tub {
+  position: absolute;
+  width: 250px;
+  top: 90px;
+  left: 70px;
+  z-index: 2;
 }
 
-.tub { width: 360px; }
-.packet { width: 260px; }
-.cup { width: 240px; }
+.packet {
+  position: absolute;
+  width: 120px;
+  bottom: 40px;
+  right: 0;
+  transform: rotate(-10deg);
+}
 
 /* SECTIONS */
-.section {
-  padding: 120px 8%;
+section {
+  padding: 100px 8%;
+  position: relative;
+  z-index: 2;
 }
 
 h2 {
@@ -146,28 +173,39 @@ p {
   color: #ff6a00;
 }
 
-/* GRID */
+/* PRODUCT GRID */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 30px;
 }
 
 .card {
   background: #11151c;
-  padding: 24px;
+  padding: 22px;
   text-align: center;
-  border: 1px solid #1f2630;
+  flex: 1;
 }
 
 .card img {
-  width: 150px;
+  width: 170px;
+}
+
+/* INVESTOR GRID */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.grid3 div {
+  background: #0f1218;
+  padding: 20px;
+  border: 1px solid #222;
 }
 
 /* SIGNUP */
 .signup {
   text-align: center;
-  padding: 120px 8%;
 }
 
 .signup input {
@@ -181,6 +219,7 @@ p {
   background: #ff6a00;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .survey-btn {
@@ -196,4 +235,16 @@ p {
   margin-top: 10px;
   font-size: 13px;
   color: #888;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
