@@ -11,7 +11,7 @@ body {
   color: white;
 }
 
-/* BACKGROUND */
+/* BASE BACKGROUND */
 .bg {
   position: fixed;
   inset: 0;
@@ -19,6 +19,52 @@ body {
     radial-gradient(circle at 25% 20%, rgba(255,106,0,0.14), transparent 45%),
     radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 50%);
   z-index: 0;
+}
+
+/* 🔶 GRID OVERLAY (adds structure, very subtle) */
+.bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 70px 70px;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 🌫 SOFT LIGHT LAYERS (depth + energy feel) */
+.bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 75%, rgba(255,106,0,0.10), transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(255,255,255,0.04), transparent 50%);
+  filter: blur(30px);
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 🌫 FLOATING PARTICLES (subtle motion) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 140px 140px;
+  animation: dustMove 22s linear infinite;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes dustMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-140px); }
 }
 
 /* NAV */
@@ -57,19 +103,20 @@ body {
   grid-template-columns: 1.2fr 1fr;
   padding: 140px 8% 100px;
   gap: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .kicker {
   color: #ff6a00;
   letter-spacing: 2px;
   font-size: 13px;
-  margin-bottom: 10px;
 }
 
 .hero h1 {
   font-size: 3.4rem;
   line-height: 1.05;
-  margin-bottom: 18px;
+  margin: 18px 0;
 }
 
 .sub {
@@ -108,16 +155,11 @@ body {
   font-size: 14px;
 }
 
-/* HERO VISUAL (CLEAN SYSTEM — NO OVERLAP) */
+/* HERO VISUAL */
 .hero-right {
   position: relative;
   height: 460px;
-}
-
-.product-stage {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
 }
 
 /* glow */
@@ -129,10 +171,10 @@ body {
   filter: blur(60px);
   top: 60px;
   left: 40px;
+  z-index: 0;
 }
 
-/* PRODUCTS IN HERO (CONTROLLED COMPOSITION) */
-
+/* PRODUCTS (hero composition) */
 .tub {
   position: absolute;
   width: 250px;
@@ -152,9 +194,9 @@ body {
 
 .cup {
   position: absolute;
-  width: 115px;
-  bottom: -30px;
-  left: 30px;
+  width: 120px;
+  bottom: -40px;
+  left: 20px;
   transform: rotate(7deg);
   z-index: 3;
   filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
@@ -189,7 +231,7 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCT GRID */
+/* PRODUCTS GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
