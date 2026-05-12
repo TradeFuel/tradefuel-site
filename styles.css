@@ -16,7 +16,7 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.16), transparent 45%),
+    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.14), transparent 45%),
     radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 50%);
   z-index: 0;
 }
@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 18px 8%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
   backdrop-filter: blur(14px);
   z-index: 10;
 }
@@ -55,7 +55,7 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: 140px 8% 90px;
+  padding: 140px 8% 100px;
   gap: 60px;
 }
 
@@ -63,18 +63,13 @@ body {
   color: #ff6a00;
   letter-spacing: 2px;
   font-size: 13px;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   line-height: 1.05;
-  margin: 18px 0;
-}
-
-.hero-promise {
-  margin-top: 10px;
-  color: #ff6a00;
-  font-weight: 600;
+  margin-bottom: 18px;
 }
 
 .sub {
@@ -113,13 +108,13 @@ body {
   font-size: 14px;
 }
 
-/* HERO VISUAL FIXED SYSTEM (NO OVERLAP) */
+/* HERO VISUAL (CLEAN SYSTEM — NO OVERLAP) */
 .hero-right {
   position: relative;
   height: 460px;
 }
 
-.hero-stack {
+.product-stage {
   position: relative;
   width: 100%;
   height: 100%;
@@ -128,16 +123,43 @@ body {
 /* glow */
 .glow {
   position: absolute;
-  width: 360px;
-  height: 360px;
+  width: 380px;
+  height: 380px;
   background: radial-gradient(circle, rgba(255,106,0,0.25), transparent);
-  filter: blur(55px);
+  filter: blur(60px);
   top: 60px;
   left: 40px;
-  z-index: 0;
 }
 
-/* CLEAN CONTROLLED POSITIONS */
+/* PRODUCTS IN HERO (CONTROLLED COMPOSITION) */
+
+.tub {
+  position: absolute;
+  width: 250px;
+  top: 90px;
+  left: 70px;
+  z-index: 4;
+}
+
+.packet {
+  position: absolute;
+  width: 110px;
+  bottom: 50px;
+  right: 20px;
+  transform: rotate(-8deg);
+  z-index: 4;
+}
+
+.cup {
+  position: absolute;
+  width: 115px;
+  bottom: -30px;
+  left: 30px;
+  transform: rotate(7deg);
+  z-index: 3;
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
+}
+
 .logo-float {
   position: absolute;
   width: 70px;
@@ -146,37 +168,9 @@ body {
   z-index: 5;
 }
 
-.tub {
-  position: absolute;
-  width: 240px;
-  top: 95px;
-  left: 70px;
-  z-index: 4;
-}
-
-.packet {
-  position: absolute;
-  width: 110px;
-  bottom: 60px;
-  right: 20px;
-  transform: rotate(-8deg);
-  z-index: 4;
-}
-
-/* CUP FIX — LOWERED SO IT NEVER OVERLAPS */
-.cup {
-  position: absolute;
-  width: 120px;
-  bottom: -40px;
-  left: 20px;
-  transform: rotate(7deg);
-  z-index: 3;
-  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
-}
-
 /* SECTIONS */
 section {
-  padding: 100px 8%;
+  padding: 120px 8%;
   position: relative;
   z-index: 2;
 }
@@ -195,7 +189,7 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCTS */
+/* PRODUCT GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -204,7 +198,7 @@ p {
 
 .card {
   background: #11151c;
-  padding: 22px;
+  padding: 24px;
   text-align: center;
   border: 1px solid #1f2630;
   transition: 0.25s ease;
@@ -216,6 +210,7 @@ p {
 
 .card img {
   width: 170px;
+  margin-bottom: 10px;
 }
 
 /* INVESTOR */
@@ -227,7 +222,7 @@ p {
 
 .grid3 div {
   background: #0f1218;
-  padding: 20px;
+  padding: 22px;
   border: 1px solid #222;
 }
 
