@@ -29,7 +29,7 @@ body {
   z-index: -1;
 }
 
-/* LAYOUT */
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -99,8 +99,8 @@ h1 {
 
 .sub {
   color: var(--gray);
-  max-width: 520px;
   line-height: 1.6;
+  max-width: 520px;
 }
 
 /* BUTTONS */
@@ -114,7 +114,6 @@ h1 {
   padding: 12px 18px;
   text-decoration: none;
   font-weight: 700;
-  display: inline-block;
 }
 
 .primary {
@@ -137,7 +136,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* HERO RIGHT FIXED SYSTEM */
+/* HERO IMAGE SYSTEM (FIXED & CLEAN) */
 .hero-right {
   position: relative;
   display: flex;
@@ -154,43 +153,43 @@ h1 {
   filter: blur(90px);
 }
 
-/* PRODUCT STACK (CLEAN LAYER SYSTEM) */
+/* STACK */
 .product-stack {
   position: relative;
   width: 320px;
   height: 320px;
 }
 
-/* CENTER */
+/* MAIN TUB */
 .tub {
   position: absolute;
   width: 240px;
   left: 50%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 
-/* LEFT */
+/* CUP */
 .cup {
   position: absolute;
   width: 120px;
   left: 0;
-  bottom: 20px;
+  bottom: 10px;
   z-index: 2;
 }
 
-/* RIGHT */
+/* PACKET */
 .packet {
   position: absolute;
-  width: 105px;
+  width: 100px;
   right: 0;
   bottom: 0;
   transform: rotate(-6deg);
   z-index: 1;
 }
 
-/* FLOAT LOGO */
+/* LOGO FLOAT */
 .logo-float {
   position: absolute;
   width: 60px;
@@ -211,6 +210,10 @@ h1 {
 .narrow {
   max-width: 720px;
   margin: 0 auto;
+}
+
+.center {
+  text-align: center;
 }
 
 /* GRID */
@@ -257,7 +260,7 @@ button {
   cursor: pointer;
 }
 
-/* SURVEY */
+/* SURVEY FIXED */
 .survey-btn {
   display: inline-block;
   margin-top: 22px;
