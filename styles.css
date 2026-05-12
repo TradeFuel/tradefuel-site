@@ -4,7 +4,6 @@
   --white: #ffffff;
 }
 
-/* BASE */
 body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
@@ -20,59 +19,21 @@ body {
   z-index: -1;
 }
 
-/* CONTAINERS */
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 24px;
 }
 
-.narrow {
-  max-width: 760px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* ORANGE */
-.orange {
-  color: var(--orange);
-}
-
-/* NAV */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 24px;
-}
-
-.brand {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-weight: 700;
-}
-
-.mark {
-  width: 36px;
-  height: 36px;
-  background: var(--orange);
-  color: black;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-}
-
-/* HERO */
+/* HERO GRID */
 .hero {
   padding: 120px 0;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 80px;
   align-items: center;
 }
@@ -81,31 +42,23 @@ body {
 .kicker {
   color: var(--orange);
   letter-spacing: 2px;
-  margin-bottom: 12px;
 }
 
 h1 {
   font-size: 64px;
   line-height: 1.05;
-  margin: 16px 0;
 }
 
 .subhead {
-  opacity: 0.78;
-  font-size: 18px;
+  opacity: 0.8;
   line-height: 1.6;
 }
 
-.statement {
-  margin-top: 12px;
-  font-weight: 600;
-}
-
-/* CTA */
+/* BUTTONS */
 .cta {
   display: flex;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 .btn {
@@ -120,138 +73,67 @@ h1 {
 }
 
 .ghost {
-  border: 1px solid var(--white);
-  color: var(--white);
+  border: 1px solid white;
+  color: white;
 }
 
-/* TRUST */
-.trust {
-  display: flex;
-  gap: 18px;
-  margin-top: 28px;
-  opacity: 0.75;
+/* ORANGE */
+.orange {
+  color: var(--orange);
 }
 
-/* PRODUCT SCENE */
-.scene {
+/* ========================= */
+/* FIXED PRODUCT SYSTEM      */
+/* ========================= */
+
+.product-stack {
   position: relative;
-  width: 460px;
-  height: 440px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* glow behind products */
 .glow {
   position: absolute;
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   background: var(--orange);
   opacity: 0.12;
   filter: blur(90px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-/* PRODUCTS */
+/* row alignment FIX */
+.product-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ALL IMAGES NOW BEHAVE CONSISTENTLY */
+.product {
+  object-fit: contain;
+  display: block;
+}
+
+/* SIZE CONTROL (KEY FIX) */
 .tub {
-  width: 340px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 280px;
+  transform: translateY(-10px);
   z-index: 3;
 }
 
 .cup {
-  width: 150px;
-  position: absolute;
-  left: -20px;
-  bottom: 60px;
-  z-index: 2;
+  width: 120px;
+  transform: translateY(10px);
+  opacity: 0.95;
 }
 
 .packet {
-  width: 120px;
-  position: absolute;
-  right: -20px;
-  bottom: 50px;
-  z-index: 1;
-  transform: rotate(-6deg);
-}
-
-/* SECTIONS */
-.section {
-  padding: 120px 0;
-}
-
-.dark {
-  background: #0b0b0b;
-}
-
-/* GRIDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 30px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 30px;
-}
-
-/* CARD */
-.card {
-  background: #111;
-  padding: 20px;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* FORM */
-.signup-form {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-input {
-  padding: 14px;
-  width: 280px;
-  background: #111;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-}
-
-button {
-  padding: 14px 18px;
-  background: var(--orange);
-  border: none;
-  font-weight: 700;
-}
-
-/* SURVEY */
-.survey-btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 12px 16px;
-  border: 1px solid rgba(255,255,255,0.3);
-  text-decoration: none;
-  color: white;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 60px;
-  opacity: 0.6;
+  width: 100px;
+  transform: translateY(15px) rotate(-6deg);
+  opacity: 0.9;
 }
