@@ -61,6 +61,7 @@ body {
   align-items: center;
 }
 
+/* TEXT */
 .kicker {
   color: var(--orange);
   letter-spacing: 2px;
@@ -117,40 +118,55 @@ h1 {
   font-size: 14px;
 }
 
-/* PRODUCT STACK (STABLE + CLEAN) */
+/* HERO VISUAL (FIXED IMAGE SYSTEM) */
 .hero-right {
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
+  align-items: center;
 }
 
 .glow {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   background: var(--orange);
   opacity: 0.15;
   filter: blur(80px);
+  z-index: 0;
 }
 
-/* STACK */
+/* PRODUCT STACK (CLEAN + CONTROLLED) */
 .product-stack {
   position: relative;
   display: flex;
   align-items: flex-end;
-  gap: 12px;
+  gap: 14px;
   z-index: 2;
 }
 
-.product-stack img {
-  display: block;
+/* FIXED IMAGE SIZES (IMPORTANT) */
+.tub {
+  width: 240px;
+  z-index: 3;
 }
 
-/* SIZES */
-.tub { width: 240px; }
-.cup { width: 120px; }
-.packet { width: 100px; transform: rotate(-6deg); }
-.logo-float { width: 60px; position: absolute; top: -50px; left: 40%; }
+.cup {
+  width: 120px;
+  transform: translateY(10px);
+}
+
+.packet {
+  width: 100px;
+  transform: rotate(-6deg) translateY(20px);
+}
+
+.logo-float {
+  width: 60px;
+  position: absolute;
+  top: -60px;
+  left: 40%;
+}
 
 /* SECTIONS */
 .section {
@@ -205,9 +221,10 @@ button {
   background: var(--orange);
   border: none;
   font-weight: 700;
+  cursor: pointer;
 }
 
-/* SURVEY */
+/* SURVEY (FIXED VISIBILITY) */
 .survey-btn {
   display: inline-block;
   margin-top: 18px;
@@ -215,10 +232,6 @@ button {
   border: 1px solid var(--orange);
   color: var(--orange);
   text-decoration: none;
-}
-
-.center {
-  text-align: center;
 }
 
 /* FOOTER */
@@ -231,10 +244,4 @@ footer {
 /* ORANGE */
 .orange {
   color: var(--orange);
-}
-
-.note {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #888;
 }
