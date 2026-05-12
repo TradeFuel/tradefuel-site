@@ -9,9 +9,13 @@ body {
   font-family: 'Oswald', sans-serif;
   background: #050607;
   color: white;
+  overflow-x: hidden;
 }
 
-/* BASE BACKGROUND */
+/* =========================
+   BACKGROUND DEPTH SYSTEM
+========================= */
+
 .bg {
   position: fixed;
   inset: 0;
@@ -21,7 +25,7 @@ body {
   z-index: 0;
 }
 
-/* 🔶 GRID OVERLAY (adds structure, very subtle) */
+/* subtle grid */
 .bg::before {
   content: "";
   position: fixed;
@@ -31,11 +35,10 @@ body {
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 70px 70px;
   opacity: 0.05;
-  z-index: 0;
   pointer-events: none;
 }
 
-/* 🌫 SOFT LIGHT LAYERS (depth + energy feel) */
+/* soft lighting */
 .bg::after {
   content: "";
   position: fixed;
@@ -45,11 +48,10 @@ body {
     radial-gradient(circle at 85% 25%, rgba(255,255,255,0.04), transparent 50%);
   filter: blur(30px);
   opacity: 0.9;
-  z-index: 0;
   pointer-events: none;
 }
 
-/* 🌫 FLOATING PARTICLES (subtle motion) */
+/* floating dust */
 body::after {
   content: "";
   position: fixed;
@@ -59,7 +61,6 @@ body::after {
   animation: dustMove 22s linear infinite;
   opacity: 0.06;
   pointer-events: none;
-  z-index: 0;
 }
 
 @keyframes dustMove {
@@ -67,7 +68,10 @@ body::after {
   100% { transform: translateY(-140px); }
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
+
 .nav {
   position: fixed;
   width: 100%;
@@ -97,7 +101,10 @@ body::after {
   font-weight: 700;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -125,7 +132,7 @@ body::after {
   line-height: 1.6;
 }
 
-/* BUTTONS */
+/* buttons */
 .buttons {
   display: flex;
   gap: 12px;
@@ -147,7 +154,7 @@ body::after {
   color: white;
 }
 
-/* META */
+/* meta */
 .meta {
   display: flex;
   gap: 18px;
@@ -155,14 +162,15 @@ body::after {
   font-size: 14px;
 }
 
-/* HERO VISUAL */
+/* =========================
+   HERO VISUAL SYSTEM
+========================= */
+
 .hero-right {
   position: relative;
   height: 460px;
-  z-index: 2;
 }
 
-/* glow */
 .glow {
   position: absolute;
   width: 380px;
@@ -174,7 +182,8 @@ body::after {
   z-index: 0;
 }
 
-/* PRODUCTS (hero composition) */
+/* PRODUCT STACK (CONTROLLED COMPOSITION) */
+
 .tub {
   position: absolute;
   width: 250px;
@@ -185,21 +194,22 @@ body::after {
 
 .packet {
   position: absolute;
-  width: 110px;
-  bottom: 50px;
-  right: 20px;
-  transform: rotate(-8deg);
-  z-index: 4;
+  width: 170px;
+  bottom: 70px;
+  right: 40px;
+  transform: rotate(-6deg);
+  z-index: 5;
+  filter: drop-shadow(0 14px 25px rgba(0,0,0,0.6));
 }
 
 .cup {
   position: absolute;
-  width: 120px;
-  bottom: -40px;
-  left: 20px;
-  transform: rotate(7deg);
+  width: 165px;
+  bottom: -10px;
+  right: 110px;
+  transform: rotate(6deg);
   z-index: 3;
-  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 14px 25px rgba(0,0,0,0.6));
 }
 
 .logo-float {
@@ -207,10 +217,13 @@ body::after {
   width: 70px;
   top: 0;
   left: 140px;
-  z-index: 5;
+  z-index: 6;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
+
 section {
   padding: 120px 8%;
   position: relative;
@@ -231,7 +244,10 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCTS GRID */
+/* =========================
+   PRODUCTS GRID
+========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -255,7 +271,10 @@ p {
   margin-bottom: 10px;
 }
 
-/* INVESTOR */
+/* =========================
+   INVESTOR GRID
+========================= */
+
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -268,7 +287,10 @@ p {
   border: 1px solid #222;
 }
 
-/* SIGNUP */
+/* =========================
+   SIGNUP
+========================= */
+
 .signup {
   text-align: center;
 }
@@ -302,7 +324,10 @@ p {
   color: #888;
 }
 
-/* REVEAL */
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
