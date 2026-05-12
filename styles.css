@@ -378,3 +378,106 @@ footer {
 .orange {
   color: var(--orange);
 }
+/* ================================
+   TRADEFUEL CINEMATIC GRIT v2.1
+   (adds realism + depth refinement)
+================================ */
+
+/* darker grounded base feel */
+body {
+  background: radial-gradient(circle at top, #07080a 0%, var(--black) 60%, #030405 100%);
+}
+
+/* improved “real dust accumulation” (top-heavy grime logic) */
+body::before {
+  opacity: 0.12;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(0,0,0,0.65), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(0,0,0,0.45), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(0,0,0,0.55), transparent 60%),
+
+    url("https://www.transparenttextures.com/patterns/concrete-wall.png"),
+    url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+  mix-blend-mode: multiply;
+}
+
+/* adds subtle “smoke haze depth band” */
+body::after {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,106,0,0.06), transparent 60%),
+    radial-gradient(circle at 50% 120%, rgba(255,106,0,0.10), transparent 65%),
+    radial-gradient(circle at 0% 50%, rgba(255,255,255,0.02), transparent 60%);
+  opacity: 0.42;
+}
+
+/* improves section realism (grounded panels) */
+.section {
+  position: relative;
+}
+
+/* subtle “floor shadow” under sections */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0.55),
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* makes cards feel physically lit from above */
+.card {
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.65),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* adds “metal edge catch light” to UI blocks */
+.card,
+.cta,
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before,
+.cta::before,
+.btn.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.04) 35%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.card:hover::before,
+.cta:hover::before,
+.btn.primary:hover::before {
+  transform: translateX(120%);
+}
+
+/* stronger “heat focus” on hero product */
+.glow {
+  opacity: 0.22;
+  filter: blur(130px);
+}
+
+/* subtle vignette (focuses attention like cinematic lens) */
+body::selection {
+  background: var(--orange);
+  color: black;
+}
