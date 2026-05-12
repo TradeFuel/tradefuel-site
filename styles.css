@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -93,6 +94,7 @@ body {
   padding: 12px 18px;
   text-decoration: none;
   color: white;
+  font-weight: 600;
 }
 
 .secondary {
@@ -110,18 +112,18 @@ body {
   font-size: 14px;
 }
 
-/* HERO PRODUCT */
+/* HERO VISUAL (CLEANED) */
 .hero-right {
   position: relative;
-  height: 420px;
+  height: 450px;
 }
 
 .glow {
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
   background: radial-gradient(circle, rgba(255,106,0,0.25), transparent);
-  filter: blur(50px);
+  filter: blur(55px);
   top: 60px;
   left: 40px;
 }
@@ -131,6 +133,7 @@ body {
   width: 80px;
   top: 0;
   left: 140px;
+  z-index: 5;
 }
 
 .tub {
@@ -138,7 +141,7 @@ body {
   width: 250px;
   top: 90px;
   left: 70px;
-  z-index: 2;
+  z-index: 4;
 }
 
 .packet {
@@ -147,14 +150,17 @@ body {
   bottom: 40px;
   right: 0;
   transform: rotate(-10deg);
+  z-index: 4;
 }
 
 .cup {
   position: absolute;
-  width: 140px;
-  bottom: 0;
-  left: 20px;
-  z-index: 3;
+  width: 130px;
+  bottom: 20px;
+  left: 10px;
+  transform: rotate(6deg);
+  z-index: 6;
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
 }
 
 /* SECTIONS */
@@ -178,7 +184,7 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCT GRID (UPDATED CLEAN SYSTEM) */
+/* PRODUCTS GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -190,13 +196,18 @@ p {
   padding: 22px;
   text-align: center;
   border: 1px solid #1f2630;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
   width: 170px;
 }
 
-/* INVESTOR GRID */
+/* INVESTOR */
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
