@@ -15,6 +15,7 @@ body {
   font-family: 'Oswald', sans-serif;
   background: var(--black);
   color: white;
+  overflow-x: hidden;
 }
 
 /* BACKGROUND */
@@ -34,7 +35,7 @@ body {
   justify-content: space-between;
   padding: 18px 8%;
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   z-index: 10;
 }
 
@@ -44,25 +45,19 @@ body {
   gap: 10px;
 }
 
-.mark {
-  width: 34px;
-  height: 34px;
-  background: var(--orange);
-  color: black;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
+.logo {
+  width: 36px;
 }
 
 /* HERO */
 .hero {
-  padding: 140px 8% 100px;
+  padding: 150px 8% 90px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
 }
 
@@ -82,6 +77,12 @@ h1 {
   color: var(--gray);
   max-width: 520px;
   line-height: 1.6;
+}
+
+.hero-promise {
+  color: var(--orange);
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 /* BUTTONS */
@@ -107,26 +108,49 @@ h1 {
   color: white;
 }
 
-/* PRODUCT (CLEAN SIMPLE BLOCK) */
-.product-box {
-  text-align: center;
+/* META */
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  color: #aaa;
+  font-size: 14px;
 }
 
-.main-product {
-  width: 220px;
-  margin-bottom: 18px;
-}
-
-.product-row {
+/* PRODUCT STACK (STABLE + CLEAN) */
+.hero-right {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  position: relative;
 }
 
-.product-row img {
-  width: 90px;
-  opacity: 0.95;
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--orange);
+  opacity: 0.15;
+  filter: blur(80px);
 }
+
+/* STACK */
+.product-stack {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 2;
+}
+
+.product-stack img {
+  display: block;
+}
+
+/* SIZES */
+.tub { width: 240px; }
+.cup { width: 120px; }
+.packet { width: 100px; transform: rotate(-6deg); }
+.logo-float { width: 60px; position: absolute; top: -50px; left: 40%; }
 
 /* SECTIONS */
 .section {
@@ -138,7 +162,7 @@ h1 {
 }
 
 .narrow {
-  max-width: 700px;
+  max-width: 720px;
 }
 
 /* GRID */
@@ -163,8 +187,8 @@ h1 {
 form {
   margin-top: 25px;
   display: flex;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -207,4 +231,10 @@ footer {
 /* ORANGE */
 .orange {
   color: var(--orange);
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
 }
