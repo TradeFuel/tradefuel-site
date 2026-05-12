@@ -1,29 +1,31 @@
-// scroll reveal
+// REVEAL ON SCROLL
 const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
+function revealSections() {
+  const triggerBottom = window.innerHeight * 0.88;
+
+  reveals.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add("active");
     }
   });
-});
+}
 
-reveals.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(20px)";
-  el.style.transition = "0.6s ease";
-  observer.observe(el);
-});
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
 
-// subtle product parallax
-document.addEventListener("mousemove", (e) => {
-  const stack = document.getElementById("stack");
+// PRODUCT FLOAT EFFECT
+const stack = document.getElementById("stack");
+
+window.addEventListener("mousemove", (e) => {
+
   if (!stack) return;
 
-  const x = (e.clientX / window.innerWidth - 0.5) * 10;
-  const y = (e.clientY / window.innerHeight - 0.5) * 10;
+  const x = (window.innerWidth / 2 - e.clientX) / 40;
+  const y = (window.innerHeight / 2 - e.clientY) / 40;
 
-  stack.style.transform = `translate(${x}px, ${y}px)`;
+  stack.style.transform =
+    `translate(${x}px, ${y}px)`;
 });
