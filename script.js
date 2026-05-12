@@ -1,35 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
+// scroll reveal
+const reveals = document.querySelectorAll(".reveal");
 
-  const items = document.querySelectorAll(".reveal");
-
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  items.forEach(el => observer.observe(el));
-
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", e => {
-      const targetId = link.getAttribute("href");
-      const target = document.querySelector(targetId);
-
-      if (!target) return;
-
-      e.preventDefault();
-
-      target.scrollIntoView({
-        behavior: prefersReducedMotion ? "auto" : "smooth"
-      });
-    });
-
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
   });
+});
 
+reveals.forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(20px)";
+  el.style.transition = "0.6s ease";
+  observer.observe(el);
+});
+
+// subtle product parallax
+document.addEventListener("mousemove", (e) => {
+  const stack = document.getElementById("stack");
+  if (!stack) return;
+
+  const x = (e.clientX / window.innerWidth - 0.5) * 10;
+  const y = (e.clientY / window.innerHeight - 0.5) * 10;
+
+  stack.style.transform = `translate(${x}px, ${y}px)`;
 });
