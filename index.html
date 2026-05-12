@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>TradeFuel™ | Built for Real Work</title>
 
   <link rel="stylesheet" href="styles.css">
@@ -27,17 +28,21 @@
 <!-- HERO -->
 <header class="hero">
 
-  <div class="hero-left">
+  <div class="hero-left reveal">
 
     <p class="kicker">FUEL FOR REAL WORK</p>
 
     <h1>
       BUILT FOR THE SHIFTS<br>
-      THAT BREAK NORMAL ENERGY.
+      THAT DON’T LET UP.
     </h1>
 
+    <p class="hero-promise">
+      Join the first crew getting TradeFuel™ before public launch.
+    </p>
+
     <p class="sub">
-      Hydration + energy designed for trades working long physical days in heat, fatigue, and pressure.
+      Hydration + energy designed for roofers, welders, framers, mechanics, and crews pushing through heat, fatigue, and long physical days.
     </p>
 
     <div class="buttons">
@@ -53,36 +58,48 @@
 
   </div>
 
-  <div class="hero-right">
+  <!-- PRODUCT HERO -->
+  <div class="hero-right reveal">
 
     <div class="glow"></div>
 
-    <div class="stack">
-
-      <img src="Tub.jpg" class="product tub">
-      <img src="Packet.jpg" class="product packet">
-      <img src="Cup.jpg" class="product cup">
-
-    </div>
+    <img src="Logo.jpg" class="logo-float">
+    <img src="Tub.jpg" class="tub">
+    <img src="Packet.jpg" class="packet">
 
   </div>
 
 </header>
 
 <!-- STORY -->
-<section class="section">
+<section id="story" class="story reveal">
+
   <h2>THE PROBLEM</h2>
-  <p>Energy products are built for desks — not job sites.</p>
+  <p>
+    Energy products are built for desks — not job sites.
+    They don’t account for heat, exhaustion, or 10–14 hour physical shifts.
+  </p>
+
 </section>
 
-<section class="section">
+<!-- SOLUTION -->
+<section class="solution reveal">
+
   <h2>THE FIX</h2>
-  <p class="accent">Performance hydration built for physical labor.</p>
-  <p>No crash. No gimmicks. Just fuel for working bodies.</p>
+
+  <p class="accent">
+    Performance hydration built for physical labor.
+  </p>
+
+  <p>
+    Stable energy. Real hydration. No crash. No wellness marketing. Just fuel for working bodies.
+  </p>
+
 </section>
 
 <!-- PRODUCTS -->
-<section class="section">
+<section class="products reveal">
+
   <h2>TRADEFUEL SYSTEM</h2>
 
   <div class="grid">
@@ -97,20 +114,42 @@
       <h3>Field Packets</h3>
     </div>
 
-    <div class="card">
-      <img src="Cup.jpg">
-      <h3>Hydration Cup</h3>
+  </div>
+
+</section>
+
+<!-- INVESTOR LOGIC -->
+<section class="investor reveal">
+
+  <h2>WHY THIS WINS</h2>
+
+  <div class="grid3">
+
+    <div>
+      <h3>Ignored Market</h3>
+      <p>Tradespeople represent a massive workforce without a dedicated performance hydration brand.</p>
+    </div>
+
+    <div>
+      <h3>Daily Usage</h3>
+      <p>Built for repeated use during physical labor every single day.</p>
+    </div>
+
+    <div>
+      <h3>New Category</h3>
+      <p>Not energy drinks. Not wellness. A labor-performance fuel system.</p>
     </div>
 
   </div>
+
 </section>
 
 <!-- SIGNUP -->
-<section id="signup" class="signup">
+<section id="signup" class="signup reveal">
 
   <h2>JOIN THE FIRST RUN</h2>
 
-  <p>Get early access + launch pricing for first production batch.</p>
+  <p>Get early access + launch pricing for the first production batch.</p>
 
   <form action="https://formspree.io/f/mnjwgbwe" method="POST">
     <input type="email" name="email" placeholder="Enter email" required>
@@ -122,9 +161,17 @@
     TAKE 30s SURVEY
   </a>
 
-  <p class="signup-note">Limited early production access</p>
+  <p class="signup-note">
+    Limited first production run — early access only.
+  </p>
 
 </section>
+
+<footer>
+  <p>© TradeFuel™ — Built for the Trades</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
