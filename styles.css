@@ -74,7 +74,6 @@ body {
   margin-top: 10px;
   color: #ff6a00;
   font-weight: 600;
-  font-size: 1rem;
 }
 
 .sub {
@@ -94,7 +93,6 @@ body {
   padding: 12px 18px;
   text-decoration: none;
   color: white;
-  display: inline-block;
 }
 
 .secondary {
@@ -102,7 +100,6 @@ body {
   padding: 12px 18px;
   text-decoration: none;
   color: white;
-  display: inline-block;
 }
 
 /* META */
@@ -152,6 +149,14 @@ body {
   transform: rotate(-10deg);
 }
 
+.cup {
+  position: absolute;
+  width: 140px;
+  bottom: 0;
+  left: 20px;
+  z-index: 3;
+}
+
 /* SECTIONS */
 section {
   padding: 100px 8%;
@@ -173,9 +178,10 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCT GRID */
+/* PRODUCT GRID (UPDATED CLEAN SYSTEM) */
 .grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -183,7 +189,7 @@ p {
   background: #11151c;
   padding: 22px;
   text-align: center;
-  flex: 1;
+  border: 1px solid #1f2630;
 }
 
 .card img {
