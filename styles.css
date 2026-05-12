@@ -25,11 +25,11 @@ body {
   inset: 0;
   background:
     radial-gradient(circle at 20% 20%, rgba(255,106,0,0.12), transparent 60%),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 60%);
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 70%);
   z-index: -1;
 }
 
-/* CONTAINER */
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -43,7 +43,7 @@ body {
   justify-content: space-between;
   padding: 18px 8%;
   background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   z-index: 100;
 }
 
@@ -58,17 +58,32 @@ body {
   width: 36px;
 }
 
+.nav-right {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.nav-right a:hover {
+  opacity: 1;
+}
+
 .cta {
   background: var(--orange);
   padding: 10px 16px;
   color: black;
-  text-decoration: none;
   font-weight: 800;
 }
 
 /* HERO */
 .hero {
-  padding: 150px 8% 90px;
+  padding: 160px 8% 100px;
 }
 
 .hero-grid {
@@ -82,14 +97,13 @@ body {
 .kicker {
   color: var(--orange);
   letter-spacing: 2px;
-  margin-bottom: 10px;
-  font-size: 12px;
+  margin-bottom: 12px;
 }
 
 h1 {
   font-size: 3.6rem;
   line-height: 1.05;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .hero-promise {
@@ -104,31 +118,17 @@ h1 {
   max-width: 520px;
 }
 
-/* STATUS BOX (KEY UPGRADE) */
-.status-box {
-  margin-top: 18px;
-  padding: 14px;
-  border: 1px solid #222;
-  background: rgba(255,255,255,0.02);
-  font-size: 13px;
-  color: #bbb;
-}
-
-.status-box div {
-  margin-bottom: 6px;
-}
-
 /* BUTTONS */
 .buttons {
   display: flex;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .btn {
   padding: 12px 18px;
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .primary {
@@ -144,18 +144,17 @@ h1 {
 /* META */
 .meta {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   margin-top: 18px;
-  color: #999;
-  font-size: 13px;
+  font-size: 14px;
+  color: #aaa;
 }
 
-/* HERO RIGHT */
+/* HERO VISUAL */
 .hero-right {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .glow {
@@ -163,7 +162,7 @@ h1 {
   width: 340px;
   height: 340px;
   background: var(--orange);
-  opacity: 0.15;
+  opacity: 0.18;
   filter: blur(90px);
 }
 
@@ -180,7 +179,6 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
 }
 
 .cup {
@@ -215,10 +213,21 @@ h1 {
   background: var(--dark);
 }
 
+.center {
+  text-align: center;
+}
+
 .narrow {
   max-width: 720px;
   margin: 0 auto;
-  text-align: center;
+}
+
+/* TAGS */
+.section-tag {
+  color: var(--gray);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 /* GRID */
@@ -232,7 +241,7 @@ h1 {
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 22px;
   margin-top: 30px;
 }
 
@@ -240,6 +249,17 @@ h1 {
   background: #11151c;
   padding: 18px;
   text-align: center;
+}
+
+.card2 {
+  background: #0f1218;
+  padding: 22px;
+  border: 1px solid #222;
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 10px;
 }
 
 /* FORM */
@@ -269,7 +289,7 @@ button {
 /* SURVEY */
 .survey-btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 22px;
   padding: 12px 16px;
   border: 1px solid var(--orange);
   color: var(--orange);
@@ -283,6 +303,7 @@ footer {
   opacity: 0.6;
 }
 
+/* ORANGE */
 .orange {
   color: var(--orange);
 }
