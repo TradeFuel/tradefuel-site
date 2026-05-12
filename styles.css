@@ -3,18 +3,8 @@
   --black: #050607;
   --dark: #0b0f14;
   --gray: #a8a8a8;
-
-  /* spacing system */
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 32px;
-  --space-xl: 64px;
-  --space-xxl: 120px;
 }
 
-/* ================================
-   RESET
-================================ */
 * {
   margin: 0;
   padding: 0;
@@ -29,82 +19,46 @@ body {
   position: relative;
 }
 
-/* ================================
-   BACKGROUND (SIMPLIFIED + CLEANER)
-================================ */
+/* BACKGROUND */
 .bg {
   position: fixed;
   inset: 0;
-  z-index: -3;
-
+  z-index: -2;
   background:
     radial-gradient(circle at 20% 20%, rgba(255,106,0,0.14), transparent 55%),
     radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 70%);
 }
 
-/* ================================
-   GRIT LAYER (SOFTER, LESS NOISE)
-================================ */
+/* GRIT */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
+  z-index: -1;
   pointer-events: none;
-  z-index: -2;
 
   background:
-    radial-gradient(circle at 15% 20%, rgba(0,0,0,0.55), transparent 45%),
-    radial-gradient(circle at 85% 10%, rgba(0,0,0,0.35), transparent 50%),
-    radial-gradient(circle at 25% 85%, rgba(0,0,0,0.45), transparent 55%),
-
+    radial-gradient(circle at 10% 20%, rgba(0,0,0,0.6), transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.5), transparent 55%),
     url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 
-  opacity: 0.06;
+  opacity: 0.08;
 }
 
-/* ================================
-   ATMOSPHERE GLOW
-================================ */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-
-  background:
-    radial-gradient(circle at 50% 120%, rgba(255,106,0,0.10), transparent 60%),
-    radial-gradient(circle at 80% 30%, rgba(255,106,0,0.04), transparent 55%);
-
-  opacity: 0.35;
-  mix-blend-mode: overlay;
-}
-
-/* ================================
-   LAYOUT
-================================ */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ================================
-   NAV
-================================ */
+/* NAV */
 .nav {
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: var(--space-lg) 8%;
-  background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(14px);
-  z-index: 50;
+  padding: 18px 8%;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  z-index: 100;
 }
 
 .brand {
   display: flex;
-  align-items: center;
   gap: 10px;
   font-weight: 700;
 }
@@ -113,21 +67,11 @@ body::after {
   width: 36px;
 }
 
-.nav-right {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
 .nav-right a {
+  margin-left: 18px;
   color: white;
   text-decoration: none;
-  opacity: 0.75;
-  transition: 0.2s ease;
-}
-
-.nav-right a:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .cta {
@@ -135,65 +79,54 @@ body::after {
   padding: 10px 16px;
   color: black;
   font-weight: 800;
-  text-decoration: none;
-  box-shadow: 0 10px 25px rgba(255,106,0,0.22);
 }
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero {
-  padding: 180px 8% var(--space-xxl);
+  padding: 160px 8% 100px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: var(--space-xl);
-  align-items: center;
+  gap: 60px;
 }
 
 /* TEXT */
-.kicker {
-  color: var(--orange);
-  letter-spacing: 2px;
-  margin-bottom: var(--space-sm);
-}
-
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   line-height: 1.05;
-  margin-bottom: var(--space-md);
   text-transform: uppercase;
 }
 
-.hero-promise {
+.kicker {
   color: var(--orange);
-  font-weight: 600;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 10px;
 }
 
 .sub {
   color: var(--gray);
-  line-height: 1.6;
   max-width: 520px;
+  margin-top: 10px;
 }
 
-/* ================================
-   BUTTONS (IMPROVED HIERARCHY)
-================================ */
+.brand-line {
+  margin-top: 10px;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+/* BUTTONS */
 .buttons {
+  margin-top: 25px;
   display: flex;
   gap: 12px;
-  margin-top: var(--space-lg);
 }
 
 .btn {
   padding: 12px 18px;
-  font-weight: 700;
   text-decoration: none;
-  transition: 0.2s ease;
-  border-radius: 2px;
+  font-weight: 700;
 }
 
 .primary {
@@ -202,158 +135,86 @@ h1 {
 }
 
 .secondary {
-  border: 1px solid #2a2a2a;
+  border: 1px solid #333;
   color: white;
-  opacity: 0.9;
 }
 
-.btn:hover,
-.cta:hover {
-  transform: translateY(-2px);
-}
-
-/* ================================
-   META
-================================ */
-.meta {
-  display: flex;
-  gap: 14px;
-  margin-top: var(--space-md);
-  font-size: 14px;
-  color: #aaa;
-  flex-wrap: wrap;
-}
-
-/* ================================
-   HERO VISUAL
-================================ */
+/* HERO VISUAL */
 .hero-right {
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 
 .glow {
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 300px;
+  height: 300px;
   background: var(--orange);
-  opacity: 0.14;
   filter: blur(110px);
+  opacity: 0.15;
 }
 
-/* STACK */
+/* PRODUCT */
 .product-stack {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
 }
 
 .tub {
   position: absolute;
-  width: 240px;
+  width: 220px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 }
 
 .cup {
   position: absolute;
-  width: 120px;
-  left: 0;
+  width: 110px;
   bottom: 10px;
 }
 
 .packet {
   position: absolute;
-  width: 100px;
+  width: 90px;
   right: 0;
   bottom: 0;
-  transform: rotate(-6deg);
 }
 
-.logo-float {
-  position: absolute;
-  width: 60px;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ================================
-   SECTIONS (CLEANER RHYTHM)
-================================ */
+/* SECTIONS */
 .section {
-  padding: var(--space-xxl) 8%;
-  position: relative;
+  padding: 120px 8%;
 }
 
 .dark {
   background: var(--dark);
 }
 
-/* divider line */
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 8%;
-  width: 84%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,106,0,0.25),
-    transparent
-  );
-}
-
-/* ================================
-   GRIDS
-================================ */
-.grid,
-.grid3 {
+/* GRIDS */
+.grid, .grid3 {
   display: grid;
-  gap: 22px;
-  margin-top: var(--space-lg);
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
 .grid3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
 }
 
-/* ================================
-   CARDS (MORE PREMIUM FEEL)
-================================ */
-.card,
-.card2 {
+/* CARDS */
+.card, .card2 {
   background: #11151c;
   padding: 18px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: 0.25s ease;
 }
 
-.card:hover,
-.card2:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,106,0,0.25);
-}
-
-.card img {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-/* ================================
-   FORM
-================================ */
+/* FORM */
 form {
-  margin-top: var(--space-lg);
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -369,37 +230,37 @@ input {
 }
 
 button {
-  padding: 12px 16px;
   background: var(--orange);
+  padding: 12px 16px;
   border: none;
   font-weight: 800;
-  cursor: pointer;
 }
 
-/* ================================
-   SURVEY
-================================ */
-.survey-btn {
-  display: inline-block;
-  margin-top: var(--space-lg);
-  padding: 12px 16px;
-  border: 1px solid var(--orange);
-  color: var(--orange);
-  text-decoration: none;
-}
-
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: var(--space-xl);
+  padding: 60px;
   opacity: 0.6;
 }
 
-/* ================================
-   ACCENT
-================================ */
-.orange {
-  color: var(--orange);
+.orange { color: var(--orange); }
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .grid, .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-right {
+    display: none;
+  }
 }
