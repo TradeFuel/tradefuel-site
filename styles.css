@@ -307,3 +307,120 @@ footer {
 .orange {
   color: var(--orange);
 }
+/* =========================
+   TRADEFUEL GRIT LAYER v1
+   (industrial realism overlay)
+========================= */
+
+/* IMPORTANT: anchor stacking context */
+body {
+  position: relative;
+}
+
+/* subtle construction dust / concrete texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* deep ambient lighting (hot jobsite feel) */
+.bg {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,106,0,0.20), transparent 55%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.02), transparent 65%),
+    radial-gradient(circle at 50% 110%, rgba(255,106,0,0.10), transparent 60%);
+}
+
+/* section separation = structural framing lines */
+.section {
+  position: relative;
+  padding: 110px 8%;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  width: 84%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,106,0,0.35),
+    transparent
+  );
+}
+
+/* “jobsite stamp” label system */
+.section-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,106,0,0.45);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(255,106,0,0.06);
+}
+
+/* cards feel like metal plates */
+.card,
+.card2 {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-radius: 2px;
+}
+
+/* CTA feels like industrial button */
+.cta {
+  box-shadow: 0 10px 25px rgba(255,106,0,0.25);
+}
+
+/* buttons = equipment-grade UI */
+.btn {
+  border-radius: 2px;
+  letter-spacing: 0.6px;
+}
+
+/* glow becomes “hot metal heat” */
+.glow {
+  opacity: 0.22;
+  filter: blur(120px);
+}
+
+/* subtle lift interaction (physical feedback feel) */
+.btn:hover,
+.cta:hover {
+  transform: translateY(-1px);
+  transition: 0.2s ease;
+}
+
+/* slightly heavier visual rhythm */
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+/* improve depth separation */
+.dark {
+  border-top: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+/* optional: adds faint “film grain flicker” feel */
+@keyframes grainShift {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(-1px,1px); }
+  50% { transform: translate(1px,-1px); }
+  75% { transform: translate(-1px,-1px); }
+  100% { transform: translate(0,0); }
+}
+
+body::before {
+  animation: grainShift 8s steps(2) infinite;
+}
