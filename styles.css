@@ -133,10 +133,9 @@ h1 {
   margin-top: 18px;
   color: #aaa;
   font-size: 14px;
-  flex-wrap: wrap;
 }
 
-/* HERO IMAGE SYSTEM (FIXED & CLEAN) */
+/* HERO IMAGE SYSTEM */
 .hero-right {
   position: relative;
   display: flex;
@@ -153,43 +152,36 @@ h1 {
   filter: blur(90px);
 }
 
-/* STACK */
+/* PRODUCT STACK FIXED */
 .product-stack {
   position: relative;
   width: 320px;
   height: 320px;
 }
 
-/* MAIN TUB */
 .tub {
   position: absolute;
   width: 240px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
 }
 
-/* CUP */
 .cup {
   position: absolute;
   width: 120px;
   left: 0;
   bottom: 10px;
-  z-index: 2;
 }
 
-/* PACKET */
 .packet {
   position: absolute;
   width: 100px;
   right: 0;
   bottom: 0;
   transform: rotate(-6deg);
-  z-index: 1;
 }
 
-/* LOGO FLOAT */
 .logo-float {
   position: absolute;
   width: 60px;
@@ -260,10 +252,10 @@ button {
   cursor: pointer;
 }
 
-/* SURVEY FIXED */
+/* SURVEY FIX */
 .survey-btn {
   display: inline-block;
-  margin-top: 22px;
+  margin-top: 25px;
   padding: 12px 16px;
   border: 1px solid var(--orange);
   color: var(--orange);
