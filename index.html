@@ -1,562 +1,399 @@
-:root {
-  --orange: #ff6a00;
-  --black: #050607;
-  --dark: #0c1015;
-  --gray: #9ea3a8;
-}
-
-/* RESET */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Oswald', sans-serif;
-  background: var(--black);
-  color: white;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* BACKGROUND */
-
-.bg {
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,106,0,0.14), transparent 55%),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 70%);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-
-  background:
-    radial-gradient(circle at 10% 20%, rgba(0,0,0,0.6), transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.5), transparent 55%),
-    url("Texture.jpg");
-
-  background-size: cover;
-  opacity: 0.06;
-  pointer-events: none;
-}
-
-/* LAYOUT */
-
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.narrow {
-  max-width: 760px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* NAV */
-
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-
-  padding: 18px 8%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(0,0,0,0.72);
-  backdrop-filter: blur(12px);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.logo {
-  width: 36px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  opacity: 0.72;
-  transition: 0.25s ease;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-}
-
-.nav-cta {
-  background: var(--orange);
-  color: black !important;
-  padding: 10px 16px;
-  font-weight: 700;
-}
-
-/* HERO */
-
-.hero {
-  padding: 180px 8% 130px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 70px;
-}
-
-.kicker {
-  color: var(--orange);
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-}
-
-h1 {
-  font-size: 4.5rem;
-  line-height: 0.95;
-  text-transform: uppercase;
-}
-
-.hero-text {
-  margin-top: 24px;
-  max-width: 560px;
-
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-.hero-buttons {
-  margin-top: 34px;
-
-  display: flex;
-  gap: 14px;
-}
-
-.btn {
-  padding: 14px 22px;
-  text-decoration: none;
-  font-weight: 700;
-
-  transition: 0.25s ease;
-}
-
-.primary {
-  background: var(--orange);
-  color: black;
-}
-
-.secondary {
-  border: 1px solid rgba(255,255,255,0.12);
-  color: white;
-}
-
-.btn:hover,
-.nav-cta:hover,
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(255,106,0,0.18);
-}
-
-.hero-meta {
-  display: flex;
-  gap: 18px;
-  margin-top: 26px;
-
-  color: #a4a4a4;
-  flex-wrap: wrap;
-}
-
-/* HERO VISUAL */
-
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-glow {
-  position: absolute;
-  width: 340px;
-  height: 340px;
-
-  background: var(--orange);
-
-  filter: blur(120px);
-  opacity: 0.15;
-}
-
-.product-stack {
-  position: relative;
-  width: 340px;
-  height: 340px;
-}
-
-.tub {
-  position: absolute;
-  width: 250px;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-}
-
-.cup {
-  position: absolute;
-  width: 120px;
-  bottom: 10px;
-  left: 0;
-}
-
-.packet {
-  position: absolute;
-  width: 100px;
-  right: 0;
-  bottom: 0;
-}
-
-.floating-logo {
-  position: absolute;
-  width: 60px;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* SECTIONS */
-
-.section {
-  padding: 120px 8%;
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-.dark {
-  background: var(--dark);
-}
-
-.section-tag {
-  color: var(--orange);
-  letter-spacing: 2px;
-  font-size: 12px;
-
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 3rem;
-  line-height: 1;
-  text-transform: uppercase;
-
-  margin-bottom: 22px;
-}
-
-.section-copy {
-  color: var(--gray);
-  line-height: 1.8;
-}
-
-.orange {
-  color: var(--orange);
-}
-
-/* MISSION */
-
-.mission,
-.message {
-  position: relative;
-  min-height: 82vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  overflow: hidden;
-}
-
-.mission-img,
-.message-img {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: transform 7s ease;
-}
-
-.mission:hover .mission-img,
-.message:hover .message-img {
-  transform: scale(1.05);
-}
-
-.mission-overlay,
-.message-overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(to top, rgba(0,0,0,0.88), rgba(0,0,0,0.35));
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-.mission-content,
-.message-content {
-  position: relative;
-  z-index: 2;
+  <title>TradeFuel™ | Fuel for the Trades</title>
 
-  text-align: center;
-  padding: 0 8%;
-}
+  <link rel="stylesheet" href="styles.css"/>
 
-.message-content h2 {
-  font-size: 4rem;
-}
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
 
-/* GRIDS */
+<body>
 
-.product-grid,
-.why-grid {
-  margin-top: 40px;
+<div class="bg"></div>
 
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 24px;
-}
+<!-- NAV -->
+<nav class="nav">
 
-.card {
-  background: #11161d;
+  <div class="brand">
+    <img src="Logo.jpg" class="logo" alt="TradeFuel Logo">
 
-  padding: 26px;
+    <span class="brand-text">
+      <span class="orange">TRADE</span>FUEL™
+    </span>
+  </div>
 
-  text-align: center;
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#product">System</a>
+    <a href="#signup" class="nav-cta">GET ACCESS</a>
+  </div>
 
-  border: 1px solid rgba(255,255,255,0.05);
+</nav>
 
-  transition: 0.3s ease;
-}
+<!-- HERO -->
+<header class="hero">
 
-.card:hover {
-  transform: translateY(-6px);
+  <div class="container hero-grid">
 
-  border-color: rgba(255,106,0,0.22);
+    <!-- LEFT -->
+    <div class="hero-copy reveal">
 
-  box-shadow: 0 20px 40px rgba(255,106,0,0.08);
-}
+      <p class="kicker">
+        BUILT FOR REAL WORK
+      </p>
 
-.card img {
-  width: 130px;
-  margin-bottom: 18px;
-}
+      <h1>
+        FUEL FOR<br>
+        <span class="orange">LONG SHIFTS.</span>
+      </h1>
 
-.card p {
-  color: var(--gray);
-  margin-top: 12px;
-  line-height: 1.6;
-}
+      <p class="hero-text">
+        Hydration + performance support designed for roofers,
+        welders, mechanics, framers, operators,
+        and crews pushing through heat, fatigue,
+        and physically demanding days.
+      </p>
 
-/* SPLIT */
+      <div class="hero-buttons">
 
-.split-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
-}
+        <a href="#signup" class="btn primary">
+          GET EARLY ACCESS
+        </a>
 
-.split-image img {
-  width: 100%;
-  max-width: 540px;
-}
+        <a href="#story" class="btn secondary">
+          WHY IT EXISTS
+        </a>
 
-/* SIGNUP */
+      </div>
 
-.signup-form {
-  margin-top: 34px;
+      <div class="hero-meta">
+        <span>⚡ Stable Energy</span>
+        <span>🧊 Hydration Support</span>
+        <span>⛑ Built for Trades</span>
+      </div>
 
-  display: flex;
-  justify-content: center;
-  gap: 14px;
+    </div>
 
-  flex-wrap: wrap;
-}
+    <!-- RIGHT -->
+    <div class="hero-visual reveal">
 
-input {
-  width: 280px;
+      <div class="hero-glow"></div>
 
-  padding: 14px;
+      <div class="product-stack">
 
-  background: #111;
+        <img src="Tub.jpg" class="tub" alt="">
+        <img src="Cup.jpg" class="cup" alt="">
+        <img src="Packet.jpg" class="packet" alt="">
+        <img src="Logo.jpg" class="floating-logo" alt="">
 
-  border: 1px solid #2e2e2e;
+      </div>
 
-  color: white;
-}
+    </div>
 
-button {
-  padding: 14px 20px;
+  </div>
 
-  border: none;
+</header>
 
-  background: var(--orange);
+<!-- STORY -->
+<section id="story" class="section reveal">
 
-  font-weight: 800;
-  cursor: pointer;
+  <div class="container narrow">
 
-  transition: 0.25s ease;
-}
+    <p class="section-tag">
+      THE PROBLEM
+    </p>
 
-/* SURVEY BUTTON */
+    <h2>
+      MOST ENERGY PRODUCTS<br>
+      AREN’T BUILT FOR JOB SITES.
+    </h2>
 
-.survey-button {
-  margin-top: 30px;
+    <p class="section-copy">
+      Most hydration and energy products were designed for office life —
+      not heat, labour, exhaustion, and physical work that lasts all day.
+    </p>
 
-  display: inline-flex;
-  flex-direction: column;
+  </div>
 
-  gap: 5px;
+</section>
 
-  padding: 18px 28px;
+<!-- FIX -->
+<section class="section dark reveal">
 
-  text-decoration: none;
+  <div class="container narrow">
 
-  border: 1px solid rgba(255,106,0,0.24);
+    <p class="section-tag orange">
+      THE FIX
+    </p>
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,106,0,0.10),
-      rgba(255,106,0,0.03)
-    );
+    <h2>
+      BUILT FOR THE WAY<br>
+      REAL WORK FEELS.
+    </h2>
 
-  transition: 0.25s ease;
-}
+    <p class="section-copy">
+      TradeFuel™ is built around hydration loss,
+      long shifts, heat exposure, and consistent performance —
+      without overload or crash.
+    </p>
 
-.survey-button:hover {
-  transform: translateY(-4px);
+  </div>
 
-  border-color: rgba(255,106,0,0.55);
+</section>
 
-  box-shadow: 0 18px 40px rgba(255,106,0,0.18);
-}
+<!-- MISSION -->
+<section class="mission reveal">
 
-.survey-small {
-  color: rgba(255,255,255,0.45);
+  <img src="Mission.jpg" class="mission-img" alt="">
 
-  font-size: 11px;
-  letter-spacing: 2px;
-}
+  <div class="mission-overlay"></div>
 
-.survey-main {
-  color: white;
+  <div class="mission-content">
 
-  font-size: 1rem;
-  font-weight: 700;
-}
+    <p class="section-tag">
+      THE MISSION
+    </p>
 
-/* FOOTER */
+    <h2>
+      BUILT FOR PEOPLE<br>
+      WHO WORK WITH THEIR HANDS.
+    </h2>
 
-footer {
-  padding: 60px 8%;
-  text-align: center;
+    <p>
+      Better fuel for the crews building everything around us.
+    </p>
 
-  opacity: 0.55;
-}
+  </div>
 
-/* REVEAL */
+</section>
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
+<!-- PRODUCT -->
+<section id="product" class="section reveal">
 
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
-}
+  <div class="container">
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+    <p class="section-tag">
+      THE SYSTEM
+    </p>
 
-/* MOBILE */
+    <h2>
+      <span class="orange">TRADE</span>FUEL SYSTEM
+    </h2>
 
-@media (max-width: 900px) {
+    <div class="product-grid">
 
-  .hero-grid,
-  .split-grid,
-  .product-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
+      <div class="card">
+        <img src="Tub.jpg" alt="">
+        <h3>Hydration Tub</h3>
+        <p>
+          Built for repeat daily use on long physical shifts.
+        </p>
+      </div>
 
-  .nav-links {
-    display: none;
-  }
+      <div class="card">
+        <img src="Cup.jpg" alt="">
+        <h3>Work Cup</h3>
+        <p>
+          Durable gear designed for trucks, sites, and crews.
+        </p>
+      </div>
 
-  .hero {
-    padding-top: 140px;
-  }
+      <div class="card">
+        <img src="Packet.jpg" alt="">
+        <h3>Field Packets</h3>
+        <p>
+          Portable fuel support for demanding work environments.
+        </p>
+      </div>
 
-  h1 {
-    font-size: 2.8rem;
-  }
+    </div>
 
-  h2,
-  .message-content h2 {
-    font-size: 2.2rem;
-  }
+  </div>
 
-  .hero-copy,
-  .hero-visual,
-  .split-copy {
-    text-align: center;
-  }
+</section>
 
-  .hero-buttons,
-  .hero-meta {
-    justify-content: center;
-  }
+<!-- SYSTEM -->
+<section class="section dark reveal">
 
-  .hero-text {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  <div class="container split-grid">
 
-  .survey-button {
-    width: 100%;
-    max-width: 420px;
-  }
+    <div class="split-copy">
 
-}
+      <p class="section-tag orange">
+        SYSTEM DESIGN
+      </p>
+
+      <h2>
+        A MODULAR FUEL SYSTEM<br>
+        FOR REAL SHIFTS.
+      </h2>
+
+      <p class="section-copy">
+        Built to move between trucks, job sites,
+        bags, coolers, and long physical days
+        without slowing crews down.
+      </p>
+
+      <div class="split-points">
+        <span>Heat Ready</span>
+        <span>Portable</span>
+        <span>Hydration Support</span>
+        <span>Shift Focused</span>
+      </div>
+
+    </div>
+
+    <div class="split-image">
+      <img src="Double.jpg" alt="">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHY -->
+<section class="section reveal">
+
+  <div class="container">
+
+    <p class="section-tag">
+      WHY IT WORKS
+    </p>
+
+    <h2>
+      WHY THIS CATEGORY WINS
+    </h2>
+
+    <div class="why-grid">
+
+      <div class="card">
+        <h3>Ignored Market</h3>
+
+        <p>
+          No dedicated labour-focused hydration system exists at scale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Daily Demand</h3>
+
+        <p>
+          Built for repeated use during physically demanding work days.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>New Category</h3>
+
+        <p>
+          Not gaming fuel. Not wellness culture. Built for labour performance.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MESSAGE -->
+<section class="message reveal">
+
+  <img src="Message.jpg" class="message-img" alt="">
+
+  <div class="message-overlay"></div>
+
+  <div class="message-content">
+
+    <p class="section-tag">
+      WHY IT MATTERS
+    </p>
+
+    <h2>
+      REAL WORK<br>
+      TAKES REAL FUEL.
+    </h2>
+
+  </div>
+
+</section>
+
+<!-- SIGNUP -->
+<section id="signup" class="section signup-section reveal">
+
+  <div class="container narrow center">
+
+    <p class="section-tag">
+      EARLY ACCESS
+    </p>
+
+    <h2>
+      JOIN THE FIRST DROP
+    </h2>
+
+    <p class="section-copy">
+      Get launch updates, first batch access,
+      and early production pricing.
+    </p>
+
+    <form
+      action="https://formspree.io/f/mnjwgbwe"
+      method="POST"
+      class="signup-form"
+    >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      >
+
+      <button type="submit">
+        REQUEST ACCESS
+      </button>
+
+    </form>
+
+    <!-- SURVEY -->
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfr5qqxjQ0FLY1JkhHB_pKBuoga9cJVCvQe0OpO7yAMDvcFbw/viewform"
+      target="_blank"
+      class="survey-button"
+    >
+
+      <span class="survey-small">
+        BUILT WITH THE TRADES
+      </span>
+
+      <span class="survey-main">
+        TELL US WHAT CREWS NEED →
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    <span class="orange">TRADE</span>FUEL™
+    — Fuel for the Trades
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
