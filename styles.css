@@ -5,9 +5,7 @@
   --gray: #a8a8a8;
 }
 
-/* ================================
-   RESET
-================================ */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +18,9 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* ================================
-   BASE ATMOSPHERIC BACKGROUND
-================================ */
+/* BASE BACKGROUND */
 .bg {
   position: fixed;
   inset: 0;
@@ -37,9 +32,7 @@ body {
     radial-gradient(circle at 50% 110%, rgba(255,106,0,0.08), transparent 60%);
 }
 
-/* ================================
-   INDUSTRIAL GRIT LAYER (CONCRETE / JOBSITE)
-================================ */
+/* GRIT LAYER */
 body::before {
   content: "";
   position: fixed;
@@ -60,9 +53,7 @@ body::before {
   mix-blend-mode: multiply;
 }
 
-/* ================================
-   HEAT + DUST ATMOSPHERE LAYER
-================================ */
+/* HEAT LAYER */
 body::after {
   content: "";
   position: fixed;
@@ -79,17 +70,13 @@ body::after {
   mix-blend-mode: overlay;
 }
 
-/* ================================
-   LAYOUT
-================================ */
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* ================================
-   NAV
-================================ */
+/* NAV */
 .nav {
   position: fixed;
   width: 100%;
@@ -99,7 +86,6 @@ body::after {
   background: rgba(0,0,0,0.72);
   backdrop-filter: blur(14px);
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
 .brand {
@@ -123,11 +109,6 @@ body::after {
   color: white;
   text-decoration: none;
   opacity: 0.75;
-  font-size: 14px;
-}
-
-.nav-right a:hover {
-  opacity: 1;
 }
 
 .cta {
@@ -136,12 +117,9 @@ body::after {
   color: black;
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 10px 25px rgba(255,106,0,0.25);
 }
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero {
   padding: 170px 8% 110px;
 }
@@ -158,7 +136,6 @@ body::after {
   color: var(--orange);
   letter-spacing: 2px;
   margin-bottom: 14px;
-  font-size: 13px;
 }
 
 h1 {
@@ -180,9 +157,7 @@ h1 {
   max-width: 520px;
 }
 
-/* ================================
-   BUTTONS
-================================ */
+/* BUTTONS */
 .buttons {
   display: flex;
   gap: 12px;
@@ -193,8 +168,6 @@ h1 {
   padding: 12px 18px;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.2s ease;
-  border-radius: 2px;
 }
 
 .primary {
@@ -207,96 +180,21 @@ h1 {
   color: white;
 }
 
-.btn:hover,
-.cta:hover {
-  transform: translateY(-2px);
-}
-
-/* ================================
-   META
-================================ */
+/* META */
 .meta {
   display: flex;
   gap: 14px;
   margin-top: 18px;
   font-size: 13px;
   color: #aaa;
-  flex-wrap: wrap;
 }
 
-/* ================================
-   HERO VISUAL (JOBSITE ENERGY)
-================================ */
-.hero-right {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.glow {
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  background: var(--orange);
-  opacity: 0.16;
-  filter: blur(120px);
-}
-
-/* PRODUCT STACK */
-.product-stack {
-  position: relative;
-  width: 320px;
-  height: 320px;
-}
-
-/* CENTER */
-.tub {
-  position: absolute;
-  width: 240px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-/* LEFT */
-.cup {
-  position: absolute;
-  width: 120px;
-  left: 0;
-  bottom: 10px;
-  z-index: 2;
-}
-
-/* RIGHT */
-.packet {
-  position: absolute;
-  width: 100px;
-  right: 0;
-  bottom: 0;
-  transform: rotate(-6deg);
-  z-index: 1;
-}
-
-/* FLOAT LOGO */
-.logo-float {
-  position: absolute;
-  width: 60px;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* ================================
-   SECTIONS (STRUCTURAL RHYTHM)
-================================ */
+/* SECTIONS */
 .section {
   padding: 115px 8%;
   position: relative;
 }
 
-/* steel jobsite divider */
 .section::before {
   content: "";
   position: absolute;
@@ -304,32 +202,22 @@ h1 {
   left: 8%;
   width: 84%;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,106,0,0.28),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255,106,0,0.28), transparent);
 }
 
 .dark {
   background: var(--dark);
-  border-top: 1px solid rgba(255,255,255,0.03);
 }
 
-/* ================================
-   TAGS
-================================ */
+/* TAG */
 .section-tag {
-  color: var(--gray);
   font-size: 12px;
   letter-spacing: 2px;
+  color: var(--gray);
   margin-bottom: 10px;
 }
 
-/* ================================
-   GRIDS
-================================ */
+/* GRIDS */
 .grid,
 .grid3 {
   display: grid;
@@ -345,15 +233,11 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* ================================
-   CARDS (METAL PANEL FEEL)
-================================ */
+/* CARDS */
 .card {
   background: #11151c;
   padding: 18px;
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.55);
 }
 
 .card2 {
@@ -367,9 +251,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* ================================
-   FORM
-================================ */
+/* FORM */
 form {
   margin-top: 25px;
   display: flex;
@@ -391,33 +273,16 @@ button {
   background: var(--orange);
   border: none;
   font-weight: 800;
-  cursor: pointer;
 }
 
-/* ================================
-   SURVEY
-================================ */
-.survey-btn {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 12px 16px;
-  border: 1px solid var(--orange);
-  color: var(--orange);
-  text-decoration: none;
-}
-
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 60px;
   opacity: 0.6;
 }
 
-/* ================================
-   ACCENT
-================================ */
+/* ACCENT */
 .orange {
   color: var(--orange);
 }
