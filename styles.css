@@ -16,8 +16,8 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.18), transparent 45%),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.04), transparent 50%);
+    radial-gradient(circle at 25% 20%, rgba(255,106,0,0.16), transparent 45%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.03), transparent 50%);
   z-index: 0;
 }
 
@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 18px 8%;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(14px);
   z-index: 10;
 }
@@ -80,6 +80,7 @@ body {
 .sub {
   color: #a8a8a8;
   max-width: 540px;
+  line-height: 1.6;
 }
 
 /* BUTTONS */
@@ -112,10 +113,10 @@ body {
   font-size: 14px;
 }
 
-/* HERO VISUAL (CLEANED) */
+/* HERO VISUAL (CLEAN & CONTROLLED) */
 .hero-right {
   position: relative;
-  height: 450px;
+  height: 460px;
 }
 
 .glow {
@@ -153,14 +154,15 @@ body {
   z-index: 4;
 }
 
+/* FIXED CUP (VISIBLE + INTENTIONAL POSITIONING) */
 .cup {
   position: absolute;
-  width: 130px;
-  bottom: 20px;
-  left: 10px;
-  transform: rotate(6deg);
+  width: 125px;
+  bottom: -20px;
+  left: 25px;
+  transform: rotate(7deg);
   z-index: 6;
-  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 14px 25px rgba(0,0,0,0.7));
 }
 
 /* SECTIONS */
@@ -184,7 +186,7 @@ p {
   color: #ff6a00;
 }
 
-/* PRODUCTS GRID */
+/* PRODUCT GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -196,18 +198,18 @@ p {
   padding: 22px;
   text-align: center;
   border: 1px solid #1f2630;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .card img {
   width: 170px;
 }
 
-/* INVESTOR */
+/* INVESTOR GRID */
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
