@@ -19,15 +19,11 @@ body {
   z-index: -1;
 }
 
-/* CONTAINER */
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 24px;
-}
-
-.center {
-  text-align: center;
 }
 
 /* ORANGE */
@@ -57,7 +53,6 @@ body {
   color: black;
   display: grid;
   place-items: center;
-  font-weight: 800;
 }
 
 /* HERO */
@@ -83,11 +78,6 @@ h1 {
   line-height: 1.05;
 }
 
-.subhead {
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
 /* CTA */
 .cta {
   display: flex;
@@ -111,10 +101,7 @@ h1 {
   color: white;
 }
 
-/* ===================== */
-/* FIXED PRODUCT SYSTEM   */
-/* ===================== */
-
+/* PRODUCT FIX (SAFE VERSION) */
 .product {
   position: relative;
   display: flex;
@@ -122,7 +109,6 @@ h1 {
   align-items: center;
 }
 
-/* glow */
 .glow {
   position: absolute;
   width: 320px;
@@ -132,22 +118,20 @@ h1 {
   filter: blur(90px);
 }
 
-/* ROW SYSTEM (FIXED ALIGNMENT) */
+/* CLEAN ROW SYSTEM */
 .product-row {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
   z-index: 2;
 }
 
-/* IMAGES */
 .img {
-  display: block;
   object-fit: contain;
+  display: block;
 }
 
-/* hierarchy sizing FIX */
 .tub {
   width: 280px;
 }
@@ -159,7 +143,7 @@ h1 {
 
 .packet {
   width: 100px;
-  transform: translateY(14px) rotate(-6deg);
+  transform: translateY(15px) rotate(-6deg);
 }
 
 /* SECTIONS */
@@ -215,14 +199,30 @@ button {
   font-weight: 700;
 }
 
-/* SURVEY */
+/* SURVEY FIX (IMPORTANT) */
+.survey-wrap {
+  margin-top: 20px;
+}
+
 .survey-btn {
   display: inline-block;
-  margin-top: 18px;
-  padding: 12px 16px;
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
+  padding: 14px 18px;
+  margin-top: 10px;
+  border: 1px solid var(--orange);
+  color: var(--orange);
   text-decoration: none;
+  font-weight: 700;
+}
+
+.survey-btn:hover {
+  background: var(--orange);
+  color: black;
+}
+
+.survey-note {
+  opacity: 0.6;
+  margin-top: 8px;
+  font-size: 14px;
 }
 
 /* FOOTER */
